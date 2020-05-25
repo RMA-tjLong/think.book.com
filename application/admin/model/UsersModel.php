@@ -8,8 +8,13 @@ class UsersModel extends BaseModel
 {
     protected $table = 'book_users';
 
-    public function vips()
+    public function book_vips()
     {
-        return $this->hasOne('VipsModel', 'userid', 'id')->field('vip, balance');
+        return $this->hasOne('BookVipsModel', 'userid', 'id')->field('vip, balance, ended_at');
+    }
+
+    public function class_vips()
+    {
+        return $this->hasOne('ClassVipsModel', 'userid', 'id')->field('vip, balance');
     }
 }

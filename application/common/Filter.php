@@ -56,7 +56,7 @@ class Filter
 
     private function getUsersFilters($params = [])
     {
-        $fields = ['wd', 'openid', 'unionid', 'nickname', 'phone', 'added_at', 'vip', 'balance'];
+        $fields = ['wd', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10'];
 
         foreach ($fields as $field) {
             $this->_conditions[$field] = $params[$field] ?? '';
@@ -66,32 +66,44 @@ class Filter
             $this->_filters['phone|openid|u.unionid'] = ['like', '%' . $this->_conditions['wd'] . '%'];
         }
 
-        if ($this->_conditions['openid']) {
-            $this->_filters['openid'] = $this->_conditions['openid'];
+        if ($this->_conditions['s1']) {
+            $this->_filters['openid'] = $this->_conditions['s1'];
         }
 
-        if ($this->_conditions['unionid']) {
-            $this->_filters['u.unionid'] = $this->_conditions['unionid'];
+        if ($this->_conditions['s2']) {
+            $this->_filters['u.unionid'] = $this->_conditions['s2'];
         }
 
-        if ($this->_conditions['phone']) {
-            $this->_filters['phone'] = $this->_conditions['phone'];
+        if ($this->_conditions['s3']) {
+            $this->_filters['phone'] = $this->_conditions['s3'];
         }
 
-        if ($this->_conditions['vip']) {
-            $this->_filters['v.vip'] = $this->_conditions['phone'];
+        if ($this->_conditions['s4']) {
+            $this->_filters['nickname'] = ['like', '%' . $this->_conditions['s4'] . '%'];
         }
 
-        if ($this->_conditions['nickname']) {
-            $this->_filters['nickname'] = ['like', '%' . $this->_conditions['nickname'] . '%'];
+        if ($this->_conditions['s5']) {
+            $this->_filters['u.added_at'] = $this->setBetweenFilter($this->_conditions['s5']);
         }
 
-        if ($this->_conditions['balance']) {
-            $this->_filters['v.balance'] = $this->setBetweenFilter($this->_conditions['balance'], false);
+        if ($this->_conditions['s6']) {
+            $this->_filters['b_v.vip'] = $this->_conditions['s6'];
         }
 
-        if ($this->_conditions['added_at']) {
-            $this->_filters['u.added_at'] = $this->setBetweenFilter($this->_conditions['added_at']);
+        if ($this->_conditions['s7']) {
+            $this->_filters['b_v.balance'] = $this->setBetweenFilter($this->_conditions['s7'], false);
+        }
+
+        if ($this->_conditions['s8']) {
+            $this->_filters['b_v.ended_at'] = $this->setBetweenFilter($this->_conditions['s8']);
+        }
+
+        if ($this->_conditions['s9']) {
+            $this->_filters['c_v.vip'] = $this->_conditions['s9'];
+        }
+
+        if ($this->_conditions['s10']) {
+            $this->_filters['c_v.balance'] = $this->setBetweenFilter($this->_conditions['s10'], false);
         }
     }
 }

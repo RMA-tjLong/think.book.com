@@ -28,10 +28,18 @@ Route::group('admin', function() {
             Route::get('users/list', 'Users/list');
             // 查看用户详情
             Route::get('users/info', 'Users/info');
-            // 更新用户vip
-            Route::post('users/change-vip', 'Users/updateVip');
+            // 更新用户借阅vip
+            Route::post('users/change-book-vip', 'Users/updateBookVip');
+            // 更改用户借阅vip到期时间
+            Route::post('users/change-book-vip-ended', 'Users/updateBookVipEnded');
+            // 更新用户课时vip
+            Route::post('users/change-class-vip', 'Users/updateClassVip');
+            // 更新课时余额
+            // 更新借阅余额
+            // 添加教师标签
+            // 删除教师标签
             // 添加余额
-            Route::post('users/add-balance', 'Users/addBalance');
+            // Route::post('users/add-balance', 'Users/addBalance');
         });
     });
 });
