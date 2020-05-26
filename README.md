@@ -36,7 +36,7 @@
             admin/api/v1/users/change-book-vip (post)
         参数:
             id  用户id
-            vip vip等级
+            vip vip等级（0：非vip，1：月卡vip，2：季卡vip，3：年卡vip）
         返回:
             修改结果
     
@@ -44,8 +44,8 @@
         请求:
             admin/api/v1/users/change-book-vip-ended (post)
         参数:
-            id  用户id
-            ..
+            id       用户id
+            ended_at 到期时间（日期），如 2013-05-02
         返回:
             修改结果
 
@@ -54,23 +54,41 @@
             admin/api/v1/users/change-class-vip (post)
         参数:
             id  用户id
-            vip vip等级
+            vip vip等级（0：非vip，1：vip）
         返回:
             修改结果
-
-    4.用户余额添加
+        
+    6.用户教师标签
         请求:
-            admin/api/v1/users/add-balance (post)
+            admin/api/v1/users/set-teacher (post)
         参数:
-            id          用户id
-            add_balance 需要添加到余额的金钱数目
+            id        用户id
+            i_teacher 设置/取消教师标签（1：设置教师标签，0：取消教师标签）
         返回:
             修改结果
 
-    5.用户信息查询
+    7.用户信息查询
         请求:
             admin/api/v1/users/info (get)
         参数:
             id 用户id
         返回:
             查询结果
+
+    8.更改借阅余额
+        请求:
+            admin/api/v1/users/change-book-balance (post)
+        参数:
+            id      用户id
+            balance 余额（保留两位小数），如 20.52
+        返回:
+            修改结果
+
+    9.更改课时余额
+        请求:
+            admin/api/v1/users/change-class-balance (post)
+        参数:
+            id      用户id
+            balance 余额（整数）
+        返回:
+            修改结果

@@ -34,12 +34,12 @@ Route::group('admin', function() {
             Route::post('users/change-book-vip-ended', 'Users/updateBookVipEnded');
             // 更新用户课时vip
             Route::post('users/change-class-vip', 'Users/updateClassVip');
-            // 更新课时余额
             // 更新借阅余额
+            Route::post('users/change-book-balance', 'Users/updateBookBalance');
+            // 更新课时余额
+            Route::post('users/change-class-balance', 'Users/updateClassBalance');
             // 添加教师标签
-            // 删除教师标签
-            // 添加余额
-            // Route::post('users/add-balance', 'Users/addBalance');
+            Route::post('users/set-teacher', 'Users/updateTeacher');
         });
     });
 });

@@ -59,8 +59,8 @@ class Users extends Base
         if (!$id) exit;
 
         $data = UsersModel::get($id);
-        $data->book_vips;
-        $data->class_vips;
+        $data->bookVips;
+        $data->classVips;
 
         exit(ajax_return_ok($data));
     }
@@ -83,7 +83,7 @@ class Users extends Base
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $users = UsersModel::get($post['id']);
-        $res = $users->book_vips->allowField(['vip'])->save($post);
+        $res = $users->bookVips->allowField(['vip'])->save($post);
 
         if ($res) exit(ajax_return_ok());
 
@@ -96,7 +96,24 @@ class Users extends Base
      * @return void
      */
     public function updateBookVipEnded()
-    {}
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'id'       => 'require',
+            'ended_at' => 'require|date'
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $users = UsersModel::get($post['id']);
+        $res = $users->bookVips->allowField(['ended_at'])->save($post);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
     
     /**
      * 修改课程vip等级
@@ -116,7 +133,32 @@ class Users extends Base
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $users = UsersModel::get($post['id']);
-        $res = $users->class_vips->allowField(['vip'])->save($post);
+        $res = $users->classVips->allowField(['vip'])->save($post);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
+    
+    /**
+     * 修改用户是否为教师
+     *
+     * @return void
+     */
+    public function updateTeacher()
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'id'        => 'require',
+            'i_teacher' => 'require|in:1,0'
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $users = UsersModel::get($post['id']);
+        $res = $users->allowField(['i_teacher'])->save($post);
 
         if ($res) exit(ajax_return_ok());
 
@@ -124,25 +166,49 @@ class Users extends Base
     }
 
     /**
-     * 添加余额
+     * 修改借阅余额
      *
      * @return void
      */
-    public function addBalance()
+    public function updateBookBalance()
     {
         if (!Request::instance()->isPost()) exit;
 
         $post = Request::instance()->post();
         $result = $this->validate($post, [
-            'id'          => 'require',
-            'add_balance' => 'require|number'
+            'id'      => 'require',
+            'balance' => 'require|number'
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $users = UsersModel::get($post['id']);
-        $users->vips->balance += $post['add_balance'];
-        $res = $users->vips->save();
+        $res = $users->bookVips->allowField(['balance'])->save($post);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
+
+    /**
+     * 修改课时余额
+     *
+     * @return void
+     */
+    public function updateClassBalance()
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'id'      => 'require',
+            'balance' => 'require|number'
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $users = UsersModel::get($post['id']);
+        $res = $users->classVips->allowField(['balance'])->save($post);
 
         if ($res) exit(ajax_return_ok());
 
