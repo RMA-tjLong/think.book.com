@@ -32,18 +32,16 @@ class Users extends Base
             ->field('u.id, openid, u.unionid, nickname, avatar_url, gender, phone, signature, i_teacher, u.added_at, b_v.vip as b_vip, b_v.balance as b_balance, b_v.ended_at as b_ended_at, c_v.vip as c_vip, c_v.balance as c_balance')
             ->join('book_book_vips b_v', 'b_v.userid = u.id', 'left')
             ->join('book_class_vips c_v', 'c_v.userid = u.id', 'left')
-            ->where($filters);
-        $list = $res->limit(($current_page - 1) * Env::get('app.list_rows'), Env::get('app.list_rows'))
+            ->where($filters)
             ->order('added_at desc')
-            ->select();
-        $count = count($list);
-        $page = ceil($count / Env::get('app.list_rows'));
+            ->paginate(null, false, [
+                'page' => $current_page,
+                'path' => Env::get('app.client_url')
+            ]);
 
         $data = [
-            'list'         => $list,
-            'count'        => $count,
-            'current_page' => $current_page,
-            'page'         => $page
+            'list'   => $res->items(),
+            'render' => $res->render()
         ];
 
         exit(ajax_return_ok($data));
@@ -54,10 +52,8 @@ class Users extends Base
      *
      * @return void
      */
-    public function info($id = '')
+    public function info($id)
     {
-        if (!$id) exit;
-
         $data = UsersModel::get($id);
         $data->bookVips;
         $data->classVips;

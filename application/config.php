@@ -240,6 +240,6 @@ return [
     'paginate'               => [
         'type'      => 'bootstrap',
         'var_page'  => 'page',
-        'list_rows' => Env::get('app.list_rows'),
+        'list_rows' => Env::get('app.list_rows', 15),
     ],
 ];
