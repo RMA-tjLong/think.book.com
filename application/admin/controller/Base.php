@@ -9,10 +9,16 @@ use think\Request;
 class Base extends CommonBase
 {
     protected $uid;
+    protected $no_need_token = [];
 
     public function _initialize()
     {
         parent::_initialize();
+
+        // 判断是否需要验证json web token
+        if (!in_array(Request::instance()->action(), $this->no_need_token)) {
+            $this->checkToken();
+        }
     }
 
     /**
@@ -20,7 +26,7 @@ class Base extends CommonBase
      *
      * @return JSON|INT 合法则返回用户id;不合法则返回错误提示
      */
-    public function checkToken()
+    private function checkToken()
     {
         $token = Request::instance()->header('token');
 

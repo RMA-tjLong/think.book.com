@@ -10,6 +10,12 @@ use think\Env;
 
 class Auth extends Base
 {
+    public function _initialize()
+    {
+        $this->no_need_token = ['login'];
+        parent::_initialize();
+    }
+
     /**
      * 登录验证并返回JWT生成的token
      *

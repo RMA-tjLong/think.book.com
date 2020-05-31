@@ -2,8 +2,8 @@
     (json){data:数据,status:true/false,msg:提示信息}
 
 管理端接口
-=========================================================================
-    1.登录验证
+    
+    登录验证
         请求:
             admin/api/v1/auth/login (post)
         参数:
@@ -11,8 +11,8 @@
             password 密码
         返回:
             JWT token，验证成功后将该token带入请求头请求。
-=========================================================================
-    2.用户列表
+            
+    用户列表
         请求:
             admin/api/v1/users/list (get)
         参数:
@@ -32,7 +32,7 @@
         返回:
             查询结果（包括 数据、分页html代码块）
     
-    3.用户借阅vip等级更新
+    用户借阅vip等级更新
         请求:
             admin/api/v1/users/change-book-vip (post)
         参数:
@@ -41,7 +41,7 @@
         返回:
             修改结果
     
-    4.用户借阅vip到期时间更新
+    用户借阅vip到期时间更新
         请求:
             admin/api/v1/users/change-book-vip-ended (post)
         参数:
@@ -50,7 +50,7 @@
         返回:
             修改结果
 
-    5.用户课程vip等级更新
+    用户课程vip等级更新
         请求:
             admin/api/v1/users/change-class-vip (post)
         参数:
@@ -59,7 +59,7 @@
         返回:
             修改结果
         
-    6.用户教师标签
+    用户教师标签
         请求:
             admin/api/v1/users/set-teacher (post)
         参数:
@@ -68,7 +68,7 @@
         返回:
             修改结果
 
-    7.用户信息查询
+    用户信息查询
         请求:
             admin/api/v1/users/info (get)
         参数:
@@ -76,7 +76,7 @@
         返回:
             查询结果
 
-    8.更改借阅余额
+    更改借阅余额
         请求:
             admin/api/v1/users/change-book-balance (post)
         参数:
@@ -85,7 +85,7 @@
         返回:
             修改结果
 
-    9.更改课时余额
+    更改课时余额
         请求:
             admin/api/v1/users/change-class-balance (post)
         参数:
@@ -93,8 +93,8 @@
             balance 余额（整数）
         返回:
             修改结果
-=========================================================================
-    10.广告列表
+            
+    广告列表
         请求:
             admin/api/v1/ads/list (get)
         参数:
@@ -102,10 +102,53 @@
         返回:
             查询结果（包括 数据、分页html代码块）
 
-    11.广告详情
+    广告详情
         请求:
             admin/api/v1/ads/info (get)
         参数:
             id 广告id
         返回:
             查询结果
+    
+    广告删除
+        请求:
+            admin/api/v1/ads/del (post)
+        参数:
+            ids/ids[] 广告id（可以以数组形式上传，则为多项删除）
+        返回:
+            删除结果（删除的同时将尝试删除文件）
+    
+    广告添加
+        请求:
+            admin/api/v1/ads/store (post)
+        参数:
+            name    广告名称（选填）
+            content 广告内容（选填）
+            url     广告图片链接（必填，如 /static/uploads/image/....png）
+        返回:
+            添加结果
+    
+    广告更新
+        请求:
+            admin/api/v1/ads/change (post)
+        参数:
+            id      广告id（必填）
+            name    广告名称（选填）
+            content 广告内容（选填）
+            url     广告图片链接（选填）
+        返回:
+            修改结果
+
+    上传图片[该方法不必要上传jwt token]
+        请求:
+            admin/api/v1/uploads/image (post)
+        参数:
+            images[] 大小限制2M，文件后缀须为jpg,jpeg,png,gif
+        返回:
+            数组，每个元素包括文件名与文件url访问地址（/static/uploads/image/....png）
+    
+    上传视频[该方法不必要上传jwt token]
+        请求:
+            admin/api/v1/uploads/video (post)
+        参数:
+        返回:

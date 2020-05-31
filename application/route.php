@@ -41,14 +41,23 @@ Route::group('admin', function () {
                 ]);
             });
 
-            Route::group('ads', function() {
+            Route::group('ads', function () {
                 Route::get([
                     'list' => 'Ads/list',   // 获取广告列表
                     'info' => 'Ads/info'    // 查看广告详情
                 ]);
-                
-                Route::post([
 
+                Route::post([
+                    'del'    => 'Ads/del',     // 删除某条广告
+                    'store'  => 'Ads/store',   // 添加某条广告
+                    'change' => 'Ads/update'   // 更新某条广告
+                ]);
+            });
+
+            Route::group('uploads', function () {
+                Route::post([
+                    'image' => 'Uploads/image',   // 上传图片
+                    'video' => 'Uploads/video'    // 上传视频
                 ]);
             });
         });

@@ -2,17 +2,16 @@
 
 namespace app\admin\controller;
 
-use app\admin\model\AdsModel;
-use think\Request;
 use think\Db;
 use think\Env;
+use think\Request;
+use app\admin\model\AdsModel;
 
 class Ads extends Base
 {
     public function _initialize()
     {
         parent::_initialize();
-        $this->checkToken();
     }
 
     /**
@@ -57,7 +56,23 @@ class Ads extends Base
      * @return void
      */
     public function del()
-    {}
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $ids = $post['ids'];
+
+        if (!is_array($ids)) $ids = [$ids];
+
+        $list = Db::name('ads')->where(['id' => ['in', $ids]])->select();
+        $urls = [];
+
+        foreach ($list as $li) $urls[] = $li['url'];
+        foreach ($urls as $url) @unlink(ROOT_PATH . 'public' . $url);
+        if (AdsModel::destroy($ids)) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
 
     /**
      * 添加广告
@@ -65,7 +80,23 @@ class Ads extends Base
      * @return void
      */
     public function store()
-    {}
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'url' => 'require',
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $ads = new AdsModel($post);
+        $res = $ads->allowField(true)->save();
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
 
     /**
      * 更新广告
@@ -73,5 +104,21 @@ class Ads extends Base
      * @return void
      */
     public function update()
-    {}
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'id' => 'require'
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $ads = AdsModel::get($post['id']);
+        $res = $ads->allowField(['url', 'name', 'content'])->save($post);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
 }
