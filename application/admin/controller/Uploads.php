@@ -45,4 +45,35 @@ class Uploads extends Base
 
         exit(ajax_return_ok($res));
     }
+
+    /**
+     * 上传视频
+     *
+     * @return void
+     */
+    public function video()
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $res = [];
+        $file = Request::instance()->file('video');
+
+        if ($file->getInfo('name') != '') {
+            $info = $file->validate([
+                'size' => Env::get('uploads.video_size'),
+                'ext'  => Env::get('uploads.video_ext')
+            ])->move(UPLOAD_VIDEO_PATH);
+
+            if ($info) {
+                $res = [
+                    'url'  => UPLOAD_VIDEO_URL . $info->getSaveName(),
+                    'name' => $file->getInfo('name')
+                ];
+            } else {
+                exit(ajax_return_error('upload_error'));
+            }
+        }
+
+        exit(ajax_return_ok($res));
+    }
 }

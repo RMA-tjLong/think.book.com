@@ -32,12 +32,9 @@ Route::group('admin', function () {
                 ]);
 
                 Route::post([
-                    'change-book-vip'       => 'Users/updateBookVip',        // 更新用户借阅vip
-                    'change-book-vip-ended' => 'Users/updateBookVipEnded',   // 更改用户借阅vip到期时间
-                    'change-class-vip'      => 'Users/updateClassVip',       // 更新用户课时vip
-                    'change-book-balance'   => 'Users/updateBookBalance',    // 更新借阅余额
-                    'change-class-balance'  => 'Users/updateClassBalance',   // 更新课时余额
-                    'set-teacher'           => 'Users/updateTeacher'         // 添加教师标签
+                    'change-book-vip'  => 'Users/updateBookVip',    // 更新用户借阅vip相关
+                    'change-class-vip' => 'Users/updateClassVip',   // 更新用户课时vip相关
+                    'change-teacher'   => 'Users/updateTeacher'     // 添加教师标签
                 ]);
             });
 
@@ -48,9 +45,24 @@ Route::group('admin', function () {
                 ]);
 
                 Route::post([
-                    'del'    => 'Ads/del',     // 删除某条广告
+                    'drop'   => 'Ads/drop',    // 删除某条广告
                     'store'  => 'Ads/store',   // 添加某条广告
                     'change' => 'Ads/update'   // 更新某条广告
+                ]);
+            });
+
+            // TODO: 未更新md，未测试get
+            Route::group('videos', function () {
+                Route::get([
+                    'list' => 'Videos/list',   // 获取广告列表
+                    'info' => 'Videos/info'    // 查看广告详情
+                ]);
+
+                Route::post([
+                    'drop'   => 'Videos/drop',     // 删除某条视频
+                    'delete' => 'Videos/delete',   // 软删除某条视频
+                    'store'  => 'Videos/store',    // 添加某条视频
+                    'change' => 'Videos/update'    // 更新某条视频
                 ]);
             });
 

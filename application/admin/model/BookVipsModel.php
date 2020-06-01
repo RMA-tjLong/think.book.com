@@ -7,6 +7,10 @@ use app\common\model\BaseModel;
 class BookVipsModel extends BaseModel
 {
     protected $table = 'book_book_vips';
-    // 0：无vip；1：月卡vip；2：季卡vip；3：年卡vip
-    public static $vip_type = [0, 1, 2, 3];
+
+    public function getVipAttr($value)
+    {
+        $vip = [0 => '非vip', 1 => '月卡', 2 => '季卡', 3 => '年卡'];
+        return $vip[$value];
+    }
 }

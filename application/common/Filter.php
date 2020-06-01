@@ -106,4 +106,29 @@ class Filter
             $this->_filters['c_v.balance'] = $this->setBetweenFilter($this->_conditions['s10'], false);
         }
     }
+
+    private function getVideosFilters($params = [])
+    {
+        $fields = ['wd', 's1', 's2', 's3', 's4'];
+        
+        foreach ($fields as $field) {
+            $this->_conditions[$field] = $params[$field] ?? '';
+        }
+
+        if ($this->_conditions['wd']) {
+            $this->_filters['name'] = ['like', '%' . $this->_conditions['wd'] . '%'];
+        }
+
+        if ($this->_conditions['s1']) {
+            $this->_filters['name'] = $this->_conditions['s1'];
+        }
+
+        if ($this->_conditions['s2']) {
+            $this->_filters['status'] = $this->_conditions['s2'];
+        }
+
+        if ($this->_conditions['s3']) {
+            $this->_filters['added_at'] = $this->setBetweenFilter($this->_conditions['s3']);
+        }
+    }
 }

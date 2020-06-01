@@ -55,11 +55,17 @@ class Ads extends Base
      *
      * @return void
      */
-    public function del()
+    public function drop()
     {
         if (!Request::instance()->isPost()) exit;
 
         $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'ids' => 'require',
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+        
         $ids = $post['ids'];
 
         if (!is_array($ids)) $ids = [$ids];
@@ -109,7 +115,8 @@ class Ads extends Base
 
         $post = Request::instance()->post();
         $result = $this->validate($post, [
-            'id' => 'require'
+            'id'  => 'require',
+            'url' => 'require'
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
