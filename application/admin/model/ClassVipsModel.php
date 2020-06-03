@@ -6,7 +6,7 @@ use app\common\model\BaseModel;
 
 class ClassVipsModel extends BaseModel
 {
-    protected $table = 'book_class_vips';
+    protected $table = 'bk_class_vips';
 
     public function getVipAttr($value)
     {

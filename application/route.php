@@ -51,7 +51,6 @@ Route::group('admin', function () {
                 ]);
             });
 
-            // TODO: 未更新md，未测试get
             Route::group('videos', function () {
                 Route::get([
                     'list' => 'Videos/list',   // 获取广告列表

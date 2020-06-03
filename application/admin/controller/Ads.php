@@ -2,10 +2,10 @@
 
 namespace app\admin\controller;
 
-use think\Db;
 use think\Env;
 use think\Request;
 use app\admin\model\AdsModel;
+use think\Db;
 
 class Ads extends Base
 {
@@ -24,7 +24,9 @@ class Ads extends Base
         $get = Request::instance()->get();
         $current_page = $get['page'] ?? 1;
         $res = Db::name('ads')
-            ->field('id, name, content, url, added_at')
+            ->alias('ads')
+            ->field('ads.*, admins.username')
+            ->join('admins', 'admins.id = ads.adminid')
             ->order('added_at desc')
             ->paginate(null, false, [
                 'page' => $current_page,
@@ -44,9 +46,15 @@ class Ads extends Base
      *
      * @return void
      */
-    public function info($id)
+    public function info($id = '')
     {
-        $data = AdsModel::get($id);
+        $data = Db::name('ads')
+            ->alias('ads')
+            ->field('ads.*, admins.username')
+            ->join('admins', 'admins.id = ads.adminid')
+            ->order('added_at desc')
+            ->find($id);
+
         exit(ajax_return_ok($data));
     }
 
@@ -65,15 +73,16 @@ class Ads extends Base
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
-        
+
         $ids = $post['ids'];
 
         if (!is_array($ids)) $ids = [$ids];
 
-        $list = Db::name('ads')->where(['id' => ['in', $ids]])->select();
-        $urls = [];
+        $urls = Db::name('ads')
+            ->where(['id' => ['in', $ids]])
+            ->column('url');
+        $urls = array_filter($urls);
 
-        foreach ($list as $li) $urls[] = $li['url'];
         foreach ($urls as $url) @unlink(ROOT_PATH . 'public' . $url);
         if (AdsModel::destroy($ids)) exit(ajax_return_ok());
 
@@ -97,7 +106,8 @@ class Ads extends Base
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $ads = new AdsModel($post);
-        $res = $ads->allowField(true)->save();
+        $post['adminid'] = $this->uid;
+        $res = $ads->allowField(true)->save($post);
 
         if ($res) exit(ajax_return_ok());
 

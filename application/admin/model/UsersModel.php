@@ -6,7 +6,7 @@ use app\common\model\BaseModel;
 
 class UsersModel extends BaseModel
 {
-    protected $table = 'book_users';
+    protected $table = 'bk_users';
 
     public function bookVips()
     {

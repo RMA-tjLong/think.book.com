@@ -5,11 +5,12 @@ namespace app\admin\controller;
 use think\Db;
 use think\Env;
 use think\Request;
-use app\common\Filter;
 use app\admin\model\UsersModel;
 
 class Users extends Base
 {
+    use \app\common\traits\Filter;
+
     public function _initialize()
     {
         parent::_initialize();
@@ -23,14 +24,14 @@ class Users extends Base
     public function list()
     {
         $get = Request::instance()->get();
-        $filters = Filter::getInstance()->setClass(get_called_class())->getFilters($get);
         $current_page = $get['page'] ?? 1;
-        $res = Db::name('users')->alias('u')
-            ->field('u.id, openid, u.unionid, nickname, avatar_url, gender, phone, signature, i_teacher, u.added_at, b_v.vip as b_vip, b_v.balance as b_balance, b_v.ended_at as b_ended_at, c_v.vip as c_vip, c_v.balance as c_balance')
-            ->join('book_book_vips b_v', 'b_v.userid = u.id', 'left')
-            ->join('book_class_vips c_v', 'c_v.userid = u.id', 'left')
-            ->where($filters)
-            ->order('added_at desc')
+        $res = Db::name('users')
+            ->alias('users')
+            ->field('users.*, book_vips.vip as b_vip, book_vips.balance as b_balance, book_vips.ended_at as b_ended_at, class_vips.vip as c_vip, class_vips.balance as c_balance')
+            ->join('book_vips book_vips', 'book_vips.userid = users.id', 'left')
+            ->join('class_vips class_vips', 'class_vips.userid = users.id', 'left')
+            ->where($this->getFilters($get))
+            ->order('users.added_at desc')
             ->paginate(null, false, [
                 'page' => $current_page,
                 'path' => Env::get('app.client_url')
@@ -45,15 +46,45 @@ class Users extends Base
     }
 
     /**
+     * 获取筛选数组
+     *
+     * @return void
+     */
+    protected function getFilters($params = [])
+    {
+        $fields = ['wd', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10'];
+        $filters = [];
+
+        foreach ($fields as $field) $this->conditions[$field] = $params[$field] ?? '';
+
+        if ($this->conditions['wd']) $filters['users.phone|users.openid|users.unionid'] = ['like', '%' . $this->conditions['wd'] . '%'];
+        if ($this->conditions['s1']) $filters['users.openid'] = $this->conditions['s1'];
+        if ($this->conditions['s2']) $filters['users.unionid'] = $this->conditions['s2'];
+        if ($this->conditions['s3']) $filters['users.phone'] = $this->conditions['s3'];
+        if ($this->conditions['s4']) $filters['users.nickname'] = ['like', '%' . $this->conditions['s4'] . '%'];
+        if ($this->conditions['s5']) $filters['users.added_at'] = $this->setBetweenFilter($this->conditions['s5']);
+        if ($this->conditions['s6'] !== '') $filters['book_vips.vip'] = $this->conditions['s6'];
+        if ($this->conditions['s7']) $filters['book_vips.balance'] = $this->setBetweenFilter($this->conditions['s7']);
+        if ($this->conditions['s8']) $filters['book_vips.ended_at'] = $this->setBetweenFilter($this->conditions['s8']);
+        if ($this->conditions['s9'] !== '') $filters['class_vips.vip'] = $this->conditions['s9'];
+        if ($this->conditions['s10']) $filters['class_vips.balance'] = $this->setBetweenFilter($this->conditions['s10']);
+
+        return $filters;
+    }
+
+    /**
      * 查看用户详情
      *
      * @return void
      */
-    public function info($id)
+    public function info($id = '')
     {
-        $data = UsersModel::get($id);
-        $data->bookVips;
-        $data->classVips;
+        $data = Db::name('users')
+            ->alias('users')
+            ->field('users.*, book_vips.vip as b_vip, book_vips.balance as b_balance, book_vips.ended_at as b_ended_at, class_vips.vip as c_vip, class_vips.balance as c_balance')
+            ->join('book_vips book_vips', 'book_vips.userid = users.id', 'left')
+            ->join('class_vips class_vips', 'class_vips.userid = users.id', 'left')
+            ->find($id);
 
         exit(ajax_return_ok($data));
     }

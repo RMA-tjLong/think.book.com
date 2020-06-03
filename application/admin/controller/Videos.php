@@ -2,13 +2,15 @@
 
 namespace app\admin\controller;
 
-use think\Db;
 use think\Env;
 use think\Request;
 use app\admin\model\VideosModel;
+use think\Db;
 
 class Videos extends Base
 {
+    use \app\common\traits\Filter;
+
     public function _initialize()
     {
         parent::_initialize();
@@ -22,12 +24,13 @@ class Videos extends Base
     public function list()
     {
         $get = Request::instance()->get();
-        $filters = Filter::getInstance()->setClass(get_called_class())->getFilters($get);
         $current_page = $get['page'] ?? 1;
         $res = Db::name('videos')
-            ->field('id, name, content, url, status, added_at')
-            ->where($filters)
-            ->order('added_at desc')
+            ->alias('videos')
+            ->field('videos.*, admins.username')
+            ->join('admins admins', 'admins.id = videos.adminid')
+            ->where($this->getFilters($get))
+            ->order('videos.added_at desc')
             ->paginate(null, false, [
                 'page' => $current_page,
                 'path' => Env::get('app.client_url')
@@ -42,13 +45,37 @@ class Videos extends Base
     }
 
     /**
+     * 获取筛选数组
+     *
+     * @return void
+     */
+    protected function getFilters($params = [])
+    {
+        $fields = ['wd', 's1', 's2', 's3'];
+        $filters = [];
+
+        foreach ($fields as $field) $this->conditions[$field] = $params[$field] ?? '';
+
+        if ($this->conditions['wd']) $filters['videos.name'] = ['like', '%' . $this->conditions['wd'] . '%'];
+        if ($this->conditions['s1']) $filters['videos.name'] = $this->conditions['s1'];
+        if ($this->conditions['s2']) $filters['videos.status'] = $this->conditions['s2'];
+
+        return $filters;
+    }
+
+    /**
      * 查看视频详情
      *
      * @return void
      */
-    public function info($id)
+    public function info($id = '')
     {
-        $data = VideosModel::get($id);
+        $data = Db::name('videos')
+            ->alias('videos')
+            ->field('videos.*, admins.username')
+            ->join('admins admins', 'admins.id = videos.adminid')
+            ->find($id);
+
         exit(ajax_return_ok($data));
     }
 
@@ -72,10 +99,11 @@ class Videos extends Base
 
         if (!is_array($ids)) $ids = [$ids];
 
-        $list = Db::name('videos')->where(['id' => ['in', $ids]])->select();
-        $urls = [];
+        $urls = Db::name('videos')
+            ->where(['id' => ['in', $ids]])
+            ->column('url');
+        $urls = array_filter($urls);
 
-        foreach ($list as $li) $urls[] = $li['url'];
         foreach ($urls as $url) @unlink(ROOT_PATH . 'public' . $url);
         if (VideosModel::destroy($ids)) exit(ajax_return_ok());
 
@@ -102,7 +130,7 @@ class Videos extends Base
 
         if (!is_array($ids)) $ids = [$ids];
 
-        $res = Db::name('videos')->where(['id' => ['in', $ids]])->update(['status' => 0]);
+        $res = VideosModel::where(['id' => ['in', $ids]])->update(['status' => 0]);
         
         if ($res) exit(ajax_return_ok());
         exit(ajax_return_error('sql_error'));
@@ -125,7 +153,8 @@ class Videos extends Base
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $videos = new VideosModel($post);
-        $res = $videos->allowField(true)->save();
+        $post['adminid'] = $this->uid;
+        $res = $videos->allowField(true)->save($post);
 
         if ($res) exit(ajax_return_ok());
 

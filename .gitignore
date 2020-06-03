@@ -1,6 +1,4 @@
 .idea
 composer.lock
 *.log
-thinkphp
 runtime
-think.book.com.sql
