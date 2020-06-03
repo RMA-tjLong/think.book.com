@@ -51,14 +51,14 @@ class Videos extends Base
      */
     protected function getFilters($params = [])
     {
-        $fields = ['wd', 's1', 's2', 's3'];
+        $this->fields = ['wd', 's1', 's2', 's3'];
         $filters = [];
-
-        foreach ($fields as $field) $this->conditions[$field] = $params[$field] ?? '';
+        $this->setConditions($params);
 
         if ($this->conditions['wd']) $filters['videos.name'] = ['like', '%' . $this->conditions['wd'] . '%'];
         if ($this->conditions['s1']) $filters['videos.name'] = $this->conditions['s1'];
         if ($this->conditions['s2']) $filters['videos.status'] = $this->conditions['s2'];
+        if ($this->conditions['s3']) $filters['videos.added_at'] = $this->setBetweenFilter($this->conditions['s3']);
 
         return $filters;
     }

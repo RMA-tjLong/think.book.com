@@ -4,7 +4,15 @@ namespace app\common\traits;
 
 trait Filter
 {
+    protected $fields = [];
     protected $conditions = [];
+
+    protected function setConditions($params = [])
+    {
+        foreach ($this->fields as $field) {
+            $this->conditions[$field] = $params[$field] ?? '';
+        }
+    }
 
     protected function setBetweenFilter($filter_str)
     {

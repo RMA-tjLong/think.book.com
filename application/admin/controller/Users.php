@@ -52,10 +52,9 @@ class Users extends Base
      */
     protected function getFilters($params = [])
     {
-        $fields = ['wd', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10'];
+        $this->fields = ['wd', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10'];
         $filters = [];
-
-        foreach ($fields as $field) $this->conditions[$field] = $params[$field] ?? '';
+        $this->setConditions($params);
 
         if ($this->conditions['wd']) $filters['users.phone|users.openid|users.unionid'] = ['like', '%' . $this->conditions['wd'] . '%'];
         if ($this->conditions['s1']) $filters['users.openid'] = $this->conditions['s1'];
