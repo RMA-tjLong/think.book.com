@@ -220,6 +220,81 @@ id 小视频id（必填）
 name 小视频名称（选填）  
 content 小视频内容（选填）  
 url 小视频链接（必填） 
+status 小视频状态（必填）
+
+>**返回:**
+修改结果
+***
+### 试听课 / 正式课列表   
+>**请求:**   
+admin/api/v1/trial-courses/list (get)  
+admin/api/v1/formal-courses/list (get)
+
+>**参数:**   
+page 页码（选填，默认为1）  
+wd 标题模糊搜索  
+s1 标题搜索  
+s2 状态搜索  
+s3 添加时间搜索  
+
+>**返回:**
+查询结果
+***
+### 试听课 / 正式课详情
+>**请求:**  
+admin/api/v1/trial-courses/info (get)  
+admin/api/v1/formal-courses/info (get)
+
+>**参数:**  
+id 课程id
+
+>**返回:**
+查询结果
+***
+### 试听课 / 正式课删除
+>**请求:**  
+admin/api/v1/trial-courses/drop (post)  
+admin/api/v1/formal-courses/drop (post)
+
+>**参数:**  
+ids/ids[] 课程id（可以以数组形式上传，则为多项删除）
+
+>**返回:**
+删除结果
+***
+### 试听课 / 正式课移除[可通过status = 0查看已删除课程]
+>**请求:**  
+admin/api/v1/trial-courses/delete (post)  
+admin/api/v1/formal-courses/delete (post)
+
+>**参数:**  
+ids/ids[] 课程id（可以以数组形式上传，则为多项删除）
+
+>**返回:**
+移除结果
+***
+### 试听课 / 正式课添加
+>**请求:**  
+admin/api/v1/trial-courses/store (post)  
+admin/api/v1/formal-courses/store (post)  
+
+>**参数:**    
+name 课程名称（必填）  
+content 课程内容（选填）  
+
+>**返回:**
+添加结果
+***
+### 试听课 / 正式课更新
+>**请求:**   
+admin/api/v1/trial-courses/change (post)  
+admin/api/v1/formal-courses/change (post)
+
+>**参数:**    
+id 课程id（必填）  
+name 课程名称（必填）  
+content 课程内容（选填）  
+status 课程状态（必填） 
 
 >**返回:**
 修改结果

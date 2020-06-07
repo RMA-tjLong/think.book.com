@@ -147,7 +147,8 @@ class Videos extends Base
 
         $post = Request::instance()->post();
         $result = $this->validate($post, [
-            'url' => 'require',
+            'url'    => 'require',
+            'status' => 'in:1,2'
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
