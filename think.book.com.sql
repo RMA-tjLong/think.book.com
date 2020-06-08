@@ -10,10 +10,31 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2020-06-07 23:02:27
+Date: 2020-06-08 22:10:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for bk_activities
+-- ----------------------------
+DROP TABLE IF EXISTS `bk_activities`;
+CREATE TABLE `bk_activities` (
+  `id` int(11) NOT NULL,
+  `title` varchar(64) DEFAULT NULL,
+  `content` text,
+  `adminid` int(11) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `kind` tinyint(1) DEFAULT '1' COMMENT '1：精品活动；2：商业活动',
+  `status` tinyint(1) DEFAULT '1' COMMENT '0：已删除；1：已下架；2：上架中；',
+  `added_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bk_activities
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for bk_admins
@@ -158,16 +179,20 @@ DROP TABLE IF EXISTS `bk_info`;
 CREATE TABLE `bk_info` (
   `id` int(1) NOT NULL,
   `name` varchar(32) DEFAULT NULL COMMENT '企业名称',
-  `lat` decimal(10,6) DEFAULT NULL,
-  `lng` decimal(10,6) DEFAULT NULL,
+  `lat` decimal(16,6) DEFAULT NULL,
+  `lng` decimal(16,6) DEFAULT NULL,
   `address` varchar(128) DEFAULT NULL,
   `phone` varchar(32) DEFAULT NULL,
+  `company_culture` text,
+  `curriculum_structure` text,
+  `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_info
 -- ----------------------------
+INSERT INTO `bk_info` VALUES ('1', '2', '12312.123340', '7318.213231', 'asdjkhkaj啊是多久啊客户机', '7812313', '阿斯顿', '7', '2020-06-08 21:52:03');
 
 -- ----------------------------
 -- Table structure for bk_roles
@@ -179,7 +204,7 @@ CREATE TABLE `bk_roles` (
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_roles
