@@ -298,4 +298,29 @@ status 课程状态（必填）
 
 >**返回:**
 修改结果
+***
+### 企业信息详情
+>**请求:**
+admin/api/v1/info/info (get)  
+
+>**参数:** 无
+
+>**返回:**
+查询结果
+***
+### 企业信息更新
+>**请求:** 
+admin/api/v1/info/change (post)  
+
+>**参数:**    
+name 企业名称（必填）  
+lat  经度？（必填）  
+lng  纬度？（必填）  
+address 公司地址（必填）  
+phone  联系电话（必填）  
+company_culture 企业文化（选填 text）  
+curriculum_structure 课程体系（选填 text）
+
+>**返回:**
+修改结果
 

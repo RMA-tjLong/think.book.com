@@ -93,6 +93,16 @@ Route::group('admin', function () {
                 ]);
             });
 
+            Route::group('info', function() {
+                Route::get([
+                    'info' => 'Info/info'  // 获取企业信息
+                ]);
+
+                Route::post([
+                    'change' => 'Info/update'  // 更新企业信息
+                ]);
+            });
+
             Route::group('uploads', function () {
                 Route::post([
                     'image' => 'Uploads/image',   // 上传图片
