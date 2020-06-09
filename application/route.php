@@ -103,6 +103,27 @@ Route::group('admin', function () {
                 ]);
             });
 
+            Route::group('activities', function () {
+                Route::get([
+                    'list' => 'Activities/list',   // 获取活动列表
+                    'info' => 'Activities/info'    // 查看活动详情
+                ]);
+
+                Route::post([
+                    'drop'   => 'Activities/drop',     // 删除某条活动
+                    'delete' => 'Activities/delete',   // 软删除某条活动
+                    'store'  => 'Activities/store',    // 添加某条活动
+                    'change' => 'Activities/update'    // 更新某条活动
+                ]);
+            });
+
+            Route::group('admins', function() {
+                Route::post([
+                    'check-username' => 'Admins/checkUsername',   // 检查用户名是否存在
+                    'store'          => 'Admins/store',           // 添加管理员
+                ]);
+            });
+
             Route::group('uploads', function () {
                 Route::post([
                     'image' => 'Uploads/image',   // 上传图片

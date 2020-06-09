@@ -314,8 +314,8 @@ admin/api/v1/info/change (post)
 
 >**参数:**    
 name 企业名称（必填）  
-lat  经度？（必填）  
-lng  纬度？（必填）  
+lat  纬度（必填）  
+lng  经度（必填）  
 address 公司地址（必填）  
 phone  联系电话（必填）  
 company_culture 企业文化（选填 text）  
@@ -323,4 +323,99 @@ curriculum_structure 课程体系（选填 text）
 
 >**返回:**
 修改结果
+***
+### 活动列表
+>**请求:**
+admin/api/v1/activities/list (get)
+
+>**参数:**  
+page 页码（选填，默认为1）  
+kind 分类（选填，默认为1：精品活动；2：商业活动）
+wd 活动标题模糊搜索  
+s1 活动标题搜索  
+s2 活动状态搜索  
+s3 活动添加时间搜索  
+
+>**返回:**
+查询结果（包括 数据、分页html代码块）
+***
+### 活动详情
+>**请求:**
+admin/api/v1/activities/info (get)
+
+>**参数:**  
+id 活动id
+
+>**返回:**
+查询结果
+***
+### 活动删除
+>**请求:**
+admin/api/v1/activities/drop (post)
+
+>**参数:**  
+ids/ids[] 活动id（可以以数组形式上传，则为多项删除）
+
+>**返回:**
+删除结果（删除的同时将尝试删除文件）
+***
+### 活动移除[可通过status = 0查看已删除视频]
+>**请求:**
+admin/api/v1/activities/delete (post)
+
+>**参数:**  
+ids/ids[] 活动id（可以以数组形式上传，则为多项删除）
+
+>**返回:**
+移除结果
+***
+### 活动添加
+>**请求:**
+admin/api/v1/activities/store (post)
+
+>**参数:**    
+title 活动标题（必填）  
+kind 分类（选填）  
+content 活动内容（选填）  
+url 活动链接（必填，如 /static/uploads/activities/....png）
+status 活动状态（in:1,2）
+
+>**返回:**
+添加结果
+***
+### 活动更新
+>**请求:** 
+admin/api/v1/activities/change (post)
+
+>**参数:**    
+id 活动id（必填）  
+title 活动名称（必填）  
+content 活动内容（选填）  
+kind 活动分类（选填）
+url 活动链接（选填） 
+status 活动状态（必填）
+
+>**返回:**
+修改结果
+***
+### 检查用户名是否存在
+>**请求:**
+admin/api/v1/admins/check-username (post)
+
+>**参数:**
+username 用户名（必填）   
+
+>**返回:**
+检查结果
+***
+### 管理员添加
+>**请求:**
+admin/api/v1/admins/store (post)
+
+>**参数:**    
+username 用户名（必填）  
+password 密码（必填）  
+
+>**返回:**
+添加结果
 

@@ -10,9 +10,10 @@
 // +----------------------------------------------------------------------
 
 return [
-    'TOKEN_MISSED'   => 'token丢失或过期',
-    'AUTH_ERROR'     => '用户名或账号不正确',
-    'VALIDATE_ERROR' => '提交数据不完整或验证失败',
-    'SQL_ERROR'      => '数据更新失败，请稍后重试',
-    'UPLOAD_ERROR'   => '上传文件格式不正确，上传失败',
+    'TOKEN_MISSED'    => 'token丢失或过期',
+    'AUTH_ERROR'      => '用户名或账号不正确',
+    'VALIDATE_ERROR'  => '提交数据不完整或验证失败',
+    'SQL_ERROR'       => '数据更新失败，请稍后重试',
+    'UPLOAD_ERROR'    => '上传文件格式不正确，上传失败',
+    'USERNAME_EXISTS' => '该用户名已存在',
 ];
