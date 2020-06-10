@@ -26,9 +26,9 @@ class Auth extends Base
         if (!Request::instance()->isPost()) exit;
 
         $post = Request::instance()->post();
-        $res = AdminsModel::get([
+        $res = AdminsModel::where([
             'username' => $post['username'] ?? ''
-        ])->toArray();
+        ])->find();
 
         if ($res && Hash::check($post['password'], $res['password'], null, ['salt' => Env::get('app.salt')])) {
             $token = JWTToken::getInstance()->setUid($res['id'])->encode()->getToken();

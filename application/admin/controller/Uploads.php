@@ -76,4 +76,14 @@ class Uploads extends Base
 
         exit(ajax_return_ok($res));
     }
+
+    /**
+     * 上传视频
+     *
+     * @return void
+     */
+    public function excel()
+    {
+        
+    }
 }

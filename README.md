@@ -330,7 +330,7 @@ admin/api/v1/activities/list (get)
 
 >**参数:**  
 page 页码（选填，默认为1）  
-kind 分类（选填，默认为1：精品活动；2：商业活动）
+kind 分类（选填，默认为1：精品活动；2：商业活动）  
 wd 活动标题模糊搜索  
 s1 活动标题搜索  
 s2 活动状态搜索  
@@ -377,7 +377,7 @@ admin/api/v1/activities/store (post)
 title 活动标题（必填）  
 kind 分类（选填）  
 content 活动内容（选填）  
-url 活动链接（必填，如 /static/uploads/activities/....png）
+url 活动链接（必填，如 /static/uploads/activities/....png）   
 status 活动状态（in:1,2）
 
 >**返回:**
@@ -391,8 +391,8 @@ admin/api/v1/activities/change (post)
 id 活动id（必填）  
 title 活动名称（必填）  
 content 活动内容（选填）  
-kind 活动分类（选填）
-url 活动链接（选填） 
+kind 活动分类（选填）  
+url 活动链接（选填）   
 status 活动状态（必填）
 
 >**返回:**
