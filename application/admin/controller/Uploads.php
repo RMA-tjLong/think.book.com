@@ -9,7 +9,7 @@ class Uploads extends Base
 {
     public function _initialize()
     {
-        $this->no_need_token = ['image', 'video'];
+        $this->no_need_token = ['image', 'video', 'excel'];
         parent::_initialize();
     }
 
@@ -84,6 +84,27 @@ class Uploads extends Base
      */
     public function excel()
     {
-        
+        if (!Request::instance()->isPost()) exit;
+
+        $res = [];
+        $file = Request::instance()->file('excel');
+
+        if ($file->getInfo('name') != '') {
+            $info = $file->validate([
+                'size' => Env::get('uploads.excel_size'),
+                'ext'  => Env::get('uploads.excel_ext')
+            ])->move(UPLOAD_EXCEL_PATH);
+
+            if ($info) {
+                $res = [
+                    'url'  => UPLOAD_EXCEL_URL . $info->getSaveName(),
+                    'name' => $file->getInfo('name')
+                ];
+            } else {
+                exit(ajax_return_error('upload_error'));
+            }
+        }
+
+        exit(ajax_return_ok($res));
     }
 }

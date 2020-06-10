@@ -16,4 +16,5 @@ return [
     'SQL_ERROR'       => '数据更新失败，请稍后重试',
     'UPLOAD_ERROR'    => '上传文件格式不正确，上传失败',
     'USERNAME_EXISTS' => '该用户名已存在',
+    'FILE_NOT_EXISTS' => '文件不存在'
 ];
