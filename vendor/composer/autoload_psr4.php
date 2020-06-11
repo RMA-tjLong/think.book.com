@@ -6,19 +6,19 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'think\\worker\\' => array($vendorDir . '/topthink/think-worker/src'),
-    'think\\oracle\\' => array($vendorDir . '/topthink/think-oracle/src'),
-    'think\\mongo\\' => array($vendorDir . '/topthink/think-mongo/src'),
-    'think\\migration\\' => array($vendorDir . '/topthink/think-migration/src'),
-    'think\\helper\\' => array($vendorDir . '/topthink/think-helper/src'),
     'think\\composer\\' => array($vendorDir . '/topthink/think-installer/src'),
-    'think\\captcha\\' => array($vendorDir . '/topthink/think-captcha/src'),
-    'think\\' => array($vendorDir . '/topthink/think-image/src', $baseDir . '/thinkphp/library/think', $vendorDir . '/topthink/think-queue/src'),
+    'think\\' => array($baseDir . '/thinkphp/library/think'),
     'app\\' => array($baseDir . '/application'),
-    'Workerman\\' => array($vendorDir . '/workerman/workerman'),
-    'Phinx\\' => array($vendorDir . '/topthink/think-migration/phinx/src/Phinx'),
+    'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'PhpOffice\\PhpSpreadsheet\\' => array($vendorDir . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet'),
+    'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
+    'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
     'Lcobucci\\JWT\\' => array($vendorDir . '/lcobucci/jwt/src'),
     'JiaweiXS\\WeApp\\' => array($vendorDir . '/jiaweixs/weapp/src'),
     'JiaweiXS\\' => array($vendorDir . '/jiaweixs/simplecache/src'),
     'Curl\\' => array($vendorDir . '/php-curl-class/php-curl-class/src/Curl'),
+    'Complex\\' => array($vendorDir . '/markbaker/complex/classes/src'),
 );
