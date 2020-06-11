@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2020-06-08 22:10:19
+Date: 2020-06-11 22:24:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,21 +20,23 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `bk_activities`;
 CREATE TABLE `bk_activities` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(64) DEFAULT NULL,
   `content` text,
   `adminid` int(11) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
   `kind` tinyint(1) DEFAULT '1' COMMENT '1：精品活动；2：商业活动',
   `status` tinyint(1) DEFAULT '1' COMMENT '0：已删除；1：已下架；2：上架中；',
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_activities
 -- ----------------------------
+INSERT INTO `bk_activities` VALUES ('1', 'sdasda', 'asldjkjhasj', '1', '213asdsdasd', '1', '1', '2020-06-09 21:12:52', '2020-06-09 21:20:20');
+INSERT INTO `bk_activities` VALUES ('2', 'ceshi', '测试股氨基酸看到', '1', '/static/uploads/image/20200609/e77c477218c900132fd09b8b3eb40d33.png', '2', '2', '2020-06-10 20:12:16', '2020-06-10 20:12:16');
 
 -- ----------------------------
 -- Table structure for bk_admins
@@ -44,17 +46,18 @@ CREATE TABLE `bk_admins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `password` varchar(255) NOT NULL,
+  `salt` varchar(16) DEFAULT NULL,
   `groupid` int(11) DEFAULT NULL COMMENT '组id，一个组可能包含多个角色',
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`,`username`),
   UNIQUE KEY `idx_username` (`username`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_admins
 -- ----------------------------
-INSERT INTO `bk_admins` VALUES ('1', 'admin', '$2y$10$7dR5osAd5/U1mowcNCloY.pdlaC3dx0phqA4dbwOboBqHOBRy45/S', '1', '2020-04-27 17:11:37', '2020-04-29 17:30:14');
+INSERT INTO `bk_admins` VALUES ('1', 'admin', '70a0e2fe119d7baa81d2f8cab65245ac', 'y67ufX', '1', '2020-04-27 17:11:37', '2020-04-29 17:30:14');
 
 -- ----------------------------
 -- Table structure for bk_ads
@@ -106,6 +109,28 @@ INSERT INTO `bk_book_vips` VALUES ('2', '2', '42343', '1', '12.33', '2020-06-01'
 INSERT INTO `bk_book_vips` VALUES ('3', '3', 'qweqwe', '1', '1233213.00', null, '2020-05-25 22:07:12', '2020-05-25 22:07:15');
 
 -- ----------------------------
+-- Table structure for bk_books
+-- ----------------------------
+DROP TABLE IF EXISTS `bk_books`;
+CREATE TABLE `bk_books` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) DEFAULT NULL COMMENT '书名',
+  `author` varchar(64) DEFAULT NULL COMMENT '作者',
+  `publishing` varchar(128) DEFAULT NULL COMMENT '出版社',
+  `cover` varchar(255) DEFAULT NULL COMMENT '封面',
+  `code` varchar(255) DEFAULT NULL COMMENT '编号/条码',
+  `adminid` int(11) DEFAULT NULL COMMENT '管理员id',
+  `status` tinyint(1) DEFAULT '1' COMMENT '0：已删除；1：已下架；2：上架中；',
+  `added_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bk_books
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for bk_class_vips
 -- ----------------------------
 DROP TABLE IF EXISTS `bk_class_vips`;
@@ -155,6 +180,19 @@ INSERT INTO `bk_formal_courses` VALUES ('10', 'ahjskdh', 'sjflksjflkdsfsdf', '2'
 INSERT INTO `bk_formal_courses` VALUES ('11', 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 22:27:15', '2020-06-07 22:27:15');
 
 -- ----------------------------
+-- Table structure for bk_group_permission
+-- ----------------------------
+DROP TABLE IF EXISTS `bk_group_permission`;
+CREATE TABLE `bk_group_permission` (
+  `groupid` int(11) NOT NULL,
+  `permissionid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bk_group_permission
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for bk_groups
 -- ----------------------------
 DROP TABLE IF EXISTS `bk_groups`;
@@ -195,19 +233,23 @@ CREATE TABLE `bk_info` (
 INSERT INTO `bk_info` VALUES ('1', '2', '12312.123340', '7318.213231', 'asdjkhkaj啊是多久啊客户机', '7812313', '阿斯顿', '7', '2020-06-08 21:52:03');
 
 -- ----------------------------
--- Table structure for bk_roles
+-- Table structure for bk_permissions
 -- ----------------------------
-DROP TABLE IF EXISTS `bk_roles`;
-CREATE TABLE `bk_roles` (
+DROP TABLE IF EXISTS `bk_permissions`;
+CREATE TABLE `bk_permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `path` varchar(128) DEFAULT NULL,
   `name` varchar(32) DEFAULT NULL,
+  `pid` int(11) DEFAULT '0',
+  `i_menu` tinyint(1) DEFAULT '1',
+  `status` tinyint(1) DEFAULT '1',
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of bk_roles
+-- Records of bk_permissions
 -- ----------------------------
 
 -- ----------------------------

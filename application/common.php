@@ -18,7 +18,7 @@ if (!function_exists('ajax_return_error')) {
     {
         $res = [
             'status' => false,
-            'msg'    => $msg ? : Config::get('error.' . strtoUpper($code)),
+            'msg'    => $msg ?: Config::get('error.' . strtoUpper($code)),
             'data'   => []
         ];
 
@@ -36,5 +36,26 @@ if (!function_exists('ajax_return_ok')) {
         ];
 
         return json_encode($res);
+    }
+}
+
+if (!function_exists('get_hash_str')) {
+    function get_hash_str($str = '', $salt = '')
+    {
+        return hash('md5', $str . $salt);
+    }
+}
+
+if (!function_exists('get_random_str')) {
+    function get_random_str($len)
+    {
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        $str = '';
+
+        for ($i = 0; $i < $len; $i++) {
+            $str .= $chars[mt_rand(0, strlen($chars) - 1)];
+        }
+
+        return $str;
     }
 }

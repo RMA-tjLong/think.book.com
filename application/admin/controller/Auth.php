@@ -4,7 +4,6 @@ namespace app\admin\controller;
 
 use app\admin\model\AdminsModel;
 use app\common\JWTToken;
-use think\helper\Hash;
 use think\Request;
 use think\Env;
 
@@ -30,7 +29,7 @@ class Auth extends Base
             'username' => $post['username'] ?? ''
         ])->find();
 
-        if ($res && Hash::check($post['password'], $res['password'], null, ['salt' => Env::get('app.salt')])) {
+        if ($res && $res['password'] == get_hash_str($post['password'] . Env::get('app.salt'), $res['salt'])) {
             $token = JWTToken::getInstance()->setUid($res['id'])->encode()->getToken();
             exit(ajax_return_ok(['token' => $token]));
         }

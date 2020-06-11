@@ -5,7 +5,6 @@ namespace app\admin\controller;
 use think\Env;
 use think\Request;
 use app\admin\model\AdminsModel;
-use think\helper\Hash;
 
 class Admins extends Base
 {
@@ -45,7 +44,8 @@ class Admins extends Base
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
         
-        $post['password'] = Hash::make($post['password'], null, ['salt' => Env::get('app.salt')]);
+        $post['salt'] = get_random_str(6);
+        $post['password'] = get_hash_str($post['password'] . Env::get('app.salt'), $post['salt']);
         $admins = new AdminsModel($post);
         $res = $admins->allowField(true)->save($post);
 
