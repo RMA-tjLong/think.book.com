@@ -155,6 +155,16 @@ video 大小限制100M，文件后缀须为mp4，不支持批量上传
 >**返回:**
 对象，包括文件名与文件url访问地址（/static/uploads/video/....png）
 ***
+### 上传excel[该方法不必要上传jwt token]
+>**请求:**
+admin/api/v1/uploads/excel (post)
+
+>**参数:**  
+excel 大小限制100M，文件后缀须为mp4，不支持批量上传
+
+>**返回:**
+对象，包括文件名与文件url访问地址（/static/uploads/excel/....xlsx）
+***
 ### 小视频列表
 >**请求:**
 admin/api/v1/videos/list (get)
@@ -418,4 +428,23 @@ password 密码（必填）
 
 >**返回:**
 添加结果
+***
+### 下载书单模板
+>**请求:**
+static/files/books.xlsx (get)  
+
+>**参数:**    
+
+>**返回:** 
+***
+### 书单上传  
+>**请求:**
+admin/api/v1/books/import
+
+>**参数:**    
+task_name 本次上传名称(非必填，不填则默认名称为当前上传时间)  
+excel excel文件路径（由excel上传接口获取）
+
+>**返回:** 
+上传结果
 

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2020-06-11 22:24:25
+Date: 2020-06-27 21:59:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,7 +30,7 @@ CREATE TABLE `bk_activities` (
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_activities
@@ -72,7 +72,7 @@ CREATE TABLE `bk_ads` (
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_ads
@@ -114,21 +114,59 @@ INSERT INTO `bk_book_vips` VALUES ('3', '3', 'qweqwe', '1', '1233213.00', null, 
 DROP TABLE IF EXISTS `bk_books`;
 CREATE TABLE `bk_books` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) DEFAULT NULL COMMENT '书名',
+  `name` varchar(64) DEFAULT NULL COMMENT '图书名称',
+  `number` varchar(16) DEFAULT NULL COMMENT '编号',
+  `num` int(8) DEFAULT '0' COMMENT '总册数',
+  `barcode` varchar(16) DEFAULT NULL COMMENT '书刊条码',
+  `isbn` varchar(16) DEFAULT NULL COMMENT 'ISBN',
   `author` varchar(64) DEFAULT NULL COMMENT '作者',
   `publishing` varchar(128) DEFAULT NULL COMMENT '出版社',
   `cover` varchar(255) DEFAULT NULL COMMENT '封面',
-  `code` varchar(255) DEFAULT NULL COMMENT '编号/条码',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '总值',
+  `description` text COMMENT '描述',
+  `content` text COMMENT '内容简介 ',
+  `collection` varchar(16) DEFAULT NULL COMMENT '馆藏',
+  `room` varchar(16) DEFAULT NULL COMMENT '所在书室',
+  `shelf` varchar(16) DEFAULT NULL COMMENT '书架',
+  `generationid` tinyint(1) DEFAULT NULL COMMENT '年龄段id',
+  `taskid` int(11) DEFAULT NULL COMMENT '上传批次id',
   `adminid` int(11) DEFAULT NULL COMMENT '管理员id',
   `status` tinyint(1) DEFAULT '1' COMMENT '0：已删除；1：已下架；2：上架中；',
+  `upload_at` datetime DEFAULT NULL COMMENT '上架时间',
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_books
 -- ----------------------------
+INSERT INTO `bk_books` VALUES ('1', '揭秘小世界（城市）', '168800185', '1', '9787541765247', '7541765244', '张双', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('2', '揭秘小世界（森林）', '168800192', '1', '9787541765339', '7541765333', '张双叶', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('3', '揭秘小世界（四季）', '168800191', '1', '9787541765230', '7541765236', '权慧娟', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('4', '汽车多多多！', '168800004', '1', '9787505632639', '7505632639', '石哲元', '', '/static/files/book-default-cover.png', '29.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('5', '五颜六色的公交车', '168800297', '1', '9787559618917', '755961891x', 'tupera tupera', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('6', '爸爸出门以后......', '168800303', '1', '9787549584482', '7549584486', '伊莎贝尔', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('7', '影子飞机', '168800213', '1', '9787533289843', '7533289846', '五味太郎', '', '/static/files/book-default-cover.png', '33.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('8', '揭秘丛林', '168800186', '1', '9787545065770', '7545065778', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('9', '揭秘自然', '168800190', '1', '9787545068986', '754506898x', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('10', '揭秘夜晚', '168800187', '1', '9787545065787', '7545065786', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('11', '揭秘动物', '168800188', '1', '9787545068993', '7545068998', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('12', '早识300字', '168800204', '1', '9787538623857', '753862385x', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('13', '大字百家姓', '168800203', '1', '9787538640830', '7538640835', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('14', '揭秘小世界（城市）', '168800185', '1', '9787541765247', '7541765244', '张双', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('15', '揭秘小世界（森林）', '168800192', '1', '9787541765339', '7541765333', '张双叶', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('16', '揭秘小世界（四季）', '168800191', '1', '9787541765230', '7541765236', '权慧娟', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('17', '汽车多多多！', '168800004', '1', '9787505632639', '7505632639', '石哲元', '', '/static/files/book-default-cover.png', '29.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('18', '五颜六色的公交车', '168800297', '1', '9787559618917', '755961891x', 'tupera tupera', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('19', '爸爸出门以后......', '168800303', '1', '9787549584482', '7549584486', '伊莎贝尔', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('20', '影子飞机', '168800213', '1', '9787533289843', '7533289846', '五味太郎', '', '/static/files/book-default-cover.png', '33.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('21', '揭秘丛林', '168800186', '1', '9787545065770', '7545065778', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('22', '揭秘自然', '168800190', '1', '9787545068986', '754506898x', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('23', '揭秘夜晚', '168800187', '1', '9787545065787', '7545065786', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('24', '揭秘动物', '168800188', '1', '9787545068993', '7545068998', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('25', '早识300字', '168800204', '1', '9787538623857', '753862385x', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('26', '大字百家姓', '168800203', '1', '9787538640830', '7538640835', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
 
 -- ----------------------------
 -- Table structure for bk_class_vips
@@ -225,7 +263,7 @@ CREATE TABLE `bk_info` (
   `curriculum_structure` text,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_info
@@ -251,6 +289,24 @@ CREATE TABLE `bk_permissions` (
 -- ----------------------------
 -- Records of bk_permissions
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for bk_tasks
+-- ----------------------------
+DROP TABLE IF EXISTS `bk_tasks`;
+CREATE TABLE `bk_tasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) DEFAULT NULL,
+  `added_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bk_tasks
+-- ----------------------------
+INSERT INTO `bk_tasks` VALUES ('4', '123', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_tasks` VALUES ('5', '123', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
 
 -- ----------------------------
 -- Table structure for bk_trial_courses
@@ -325,7 +381,7 @@ CREATE TABLE `bk_videos` (
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_videos

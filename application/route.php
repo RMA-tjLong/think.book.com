@@ -124,10 +124,17 @@ Route::group('admin', function () {
                 ]);
             });
 
+            Route::group('books', function() {
+                Route::post([
+                    'import' => 'Books/import',   // 上传书单
+                ]);
+            });
+
             Route::group('uploads', function () {
                 Route::post([
                     'image' => 'Uploads/image',   // 上传图片
-                    'video' => 'Uploads/video'    // 上传视频
+                    'video' => 'Uploads/video',   // 上传视频
+                    'excel' => 'Uploads/excel'    // 上传excel
                 ]);
             });
         });

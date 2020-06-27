@@ -26,7 +26,7 @@ class Uploads extends Base
         $files = Request::instance()->file('images');
 
         foreach ($files as $f) {
-            if ($f->getInfo('name') != '') {
+            if ($f && $f->getInfo('name') != '') {
                 $info = $f->validate([
                     'size' => Env::get('uploads.image_size'),
                     'ext'  => Env::get('uploads.image_ext')
@@ -58,7 +58,7 @@ class Uploads extends Base
         $res = [];
         $file = Request::instance()->file('video');
 
-        if ($file->getInfo('name') != '') {
+        if ($file && $file->getInfo('name') != '') {
             $info = $file->validate([
                 'size' => Env::get('uploads.video_size'),
                 'ext'  => Env::get('uploads.video_ext')
@@ -78,7 +78,7 @@ class Uploads extends Base
     }
 
     /**
-     * 上传视频
+     * 上传excel
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class Uploads extends Base
         $res = [];
         $file = Request::instance()->file('excel');
 
-        if ($file->getInfo('name') != '') {
+        if ($file && $file->getInfo('name') != '') {
             $info = $file->validate([
                 'size' => Env::get('uploads.excel_size'),
                 'ext'  => Env::get('uploads.excel_ext')

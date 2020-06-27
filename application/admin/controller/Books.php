@@ -5,6 +5,9 @@ namespace app\admin\controller;
 use think\Request;
 use think\Env;
 use think\Db;
+use app\admin\model\BooksModel;
+use app\admin\model\TasksModel;
+use app\common\Excel;
 
 class Books extends Base
 {
@@ -26,6 +29,51 @@ class Books extends Base
 
         $excel = Request::instance()->post('excel');
         if (!$excel || !file_exists(ROOT_PATH . 'public' . $excel)) exit(ajax_return_error('file_not_exists'));
+
+        $added_at = date('Y-m-d H:i:s');
+        $task_name = Request::instance()->post('task_name') ?: $added_at;
+
+        $excel_data = Excel::import(ROOT_PATH . 'public' . $excel);
+        $data = [];
+
+        Db::startTrans();
+        try {
+            $tasks = new TasksModel;
+            $tasks->name = $task_name;
+            $tasks->added_at = $added_at;
+            $tasks->save();
+            $taskid = $tasks->id;
+    
+            foreach ($excel_data as $i => $row) {
+                if ($i < 2) continue; // 第一排省略
+                $data[] = [
+                    'name'       => $row['A'],                         // 图书名称
+                    'num'        => $row['B'],                         // 总册数
+                    'number'     => $row['C'],                         // 书刊编号
+                    'barcode'    => $row['D'],                         // 书刊条码
+                    'price'      => $row['E'],                         // 总值
+                    'isbn'       => $row['F'],                         // ISBN
+                    'author'     => $row['G'],                         // 作者
+                    'publishing' => $row['H'],                         // 出版社
+                    'collection' => $row['I'],                         // 馆藏
+                    'room'       => $row['J'],                         // 书室
+                    'shelf'      => $row['K'],                         // 书架
+                    'content'    => $row['L'],                         // 简介
+                    'taskid'     => $taskid,                           // 本次上传任务id
+                    'cover'      => Env::get('books.default_cover'),   // 书单默认封面
+                    'adminid'    => $this->uid,                        // 操作人id
+                ];
+            }
+    
+            $books = new BooksModel;
+            $books->saveAll($data);
+            Db::commit();
+        } catch (\Exception $e) {
+            exit(ajax_return_error('excel_error'));
+            Db::rollback();
+        }
+        
+        exit(ajax_return_ok());
     }
 
     /**
@@ -67,10 +115,10 @@ class Books extends Base
         $filters = [];
         $this->setConditions($params);
 
-        if ($this->conditions['wd']) $filters['videos.name'] = ['like', '%' . $this->conditions['wd'] . '%'];
-        if ($this->conditions['s1']) $filters['videos.name'] = $this->conditions['s1'];
-        if ($this->conditions['s2']) $filters['videos.status'] = $this->conditions['s2'];
-        if ($this->conditions['s3']) $filters['videos.added_at'] = $this->setBetweenFilter($this->conditions['s3']);
+        if ($this->conditions['wd']) $filters['books.name'] = ['like', '%' . $this->conditions['wd'] . '%'];
+        if ($this->conditions['s1']) $filters['books.name'] = $this->conditions['s1'];
+        if ($this->conditions['s2']) $filters['books.status'] = $this->conditions['s2'];
+        if ($this->conditions['s3']) $filters['books.added_at'] = $this->setBetweenFilter($this->conditions['s3']);
 
         return $filters;
     }
