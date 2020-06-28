@@ -125,8 +125,16 @@ Route::group('admin', function () {
             });
 
             Route::group('books', function() {
+                Route::get([
+                    'list' => 'Books/list',   // 获取书单列表
+                    'info' => 'Books/info',   // 查看书单详情
+                ]);
                 Route::post([
                     'import' => 'Books/import',   // 上传书单
+                    'drop'   => 'Books/drop',     // 删除书单
+                    'delete' => 'Books/delete',   // 软删除书单
+                    'store'  => 'Books/store',    // 添加书单
+                    'change' => 'Books/update',   // 更新书单
                 ]);
             });
 

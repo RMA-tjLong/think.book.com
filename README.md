@@ -447,4 +447,90 @@ excel excel文件路径（由excel上传接口获取）
 
 >**返回:** 
 上传结果
+***
+### 书单列表
+>**请求:**
+admin/api/v1/books/list (get)
+
+>**参数:**  
+page 页码（选填，默认为1）  
+wd 书单名称模糊搜索  
+s1 书单名称搜索  
+s2 书单年龄段搜索（上传年龄段id，年龄段列表由年龄段接口提供）  
+s3 书单条码搜索  
+s4 书单上传批次搜索（上传批次id，上传批次列表由批次接口提供）  
+
+>**返回:**
+查询结果（包括 数据、分页html代码块）
+***
+### 书单删除
+>**请求:**
+admin/api/v1/books/drop (post)
+
+>**参数:**  
+ids/ids[] 书单id（可通过数组批量删除）  
+
+>**返回:**
+删除结果
+***
+### 书单软删除
+>**请求:**
+admin/api/v1/books/delete (post)
+
+>**参数:**  
+ids/ids[] 书单id（可通过数组批量删除）  
+
+>**返回:**
+删除结果
+***
+### 书单添加
+>**请求:**
+admin/api/v1/books/store (post)
+
+>**参数:**  
+name 书单名，必填  
+number 书单编号 必填  
+barcode 书单条码 必填  
+status 书单状态（上架/下架） 只能为1或2  
+num 书单数量 选填 默认为1  
+isbn ISBN码 选填  
+author 选填  
+publishing 出版社 选填  
+cover 选填，若不上传则默认为默认封面  
+price 总值 选填  
+description 描述，出版之类的，富文本，选填   
+content 内容简介，富文本 选填   
+collection  馆藏 选  
+room 书室 选  
+shelf 书架 选  
+generationid 年龄段id，年龄段获取见年龄段接口，选填  
+
+>**返回:**
+添加结果
+***
+### 书单编辑
+>**请求:**
+admin/api/v1/books/change (post)
+
+>**参数:**  
+id 书单id 必填  
+name 书单名，必填  
+number 书单编号 必填  
+barcode 书单条码 必填  
+status 书单状态（上架/下架） 必填，只能为1或2，当原来为1（未上架）改为2（上架）时系统自动更新上架时间  
+num 书单数量 选填 默认为1  
+isbn ISBN码 选填  
+author 选填  
+publishing 出版社 选填  
+cover 必填    
+price 总值 选填  
+description 描述，出版之类的，富文本，选填   
+content 内容简介，富文本 选填   
+collection  馆藏 选  
+room 书室 选  
+shelf 书架 选  
+generationid 年龄段id，年龄段获取见年龄段接口，选填  
+
+>**返回:**
+添加结果
 

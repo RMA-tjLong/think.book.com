@@ -1,0 +1,2437 @@
+{
+	"id": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+	"name": "think.book.com",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"b57d929b-a2a7-4452-b02c-74ad8fb1d914"
+	],
+	"folders_order": [
+		"e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+		"d6bd0095-364a-4bd5-b827-0636439db2f6",
+		"7367e25f-be50-40f1-bc1a-80b0e6736755",
+		"31b6232e-c468-4a67-9fb6-4c8e2a3f8b33",
+		"a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+		"9b563959-f384-4019-b923-356f35c87973",
+		"f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+		"44398236-17ff-406a-8e77-883f72e9a797",
+		"74023d25-8c35-4513-913b-21485db0ced6",
+		"6d21ceb7-6ddc-46c8-9879-bad739249640"
+	],
+	"folders": [
+		{
+			"id": "9b563959-f384-4019-b923-356f35c87973",
+			"name": "activities",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"119e2f23-18f1-420e-ad90-09ec3a39c2d2",
+				"ae6464a3-d769-466a-aa24-153150ed41e8",
+				"3f588b25-67e1-4d31-8790-3414c16d218f",
+				"a5379417-3b99-4bbd-a6e9-0ad771b0903e",
+				"678cf200-0de1-486f-a62e-02fbe409bf6c",
+				"cc1de73b-f1db-432e-a06e-b0fef92f682b"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "6d21ceb7-6ddc-46c8-9879-bad739249640",
+			"name": "admins",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"0facc466-2813-4feb-aff0-d7ab8e375616",
+				"62ec6656-e21a-4781-8590-99254752e5bc"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "d6bd0095-364a-4bd5-b827-0636439db2f6",
+			"name": "ads",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"9ad20e0c-f37a-4e6d-80ba-57e20c8a06b3",
+				"69febede-f967-436f-9a02-5ebc6be54bbd",
+				"be54cc14-e3b4-4174-b0f8-6d924d136d98",
+				"de80d6d9-9858-4676-a277-d0f512f5d341",
+				"19226bc1-33d1-4c22-9d75-79405dbd675b"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"name": "books",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"9a189896-26f0-43ff-ab79-5a8555e07270",
+				"db49ff25-e48a-4434-9b84-04f284ba2e13",
+				"465abc00-d779-411b-bcfc-b6f015292140",
+				"d52e5ecc-d2d2-4f0d-b957-fb9a1b927281",
+				"a0137ad4-8ec2-4915-afc2-7084d6953e6a",
+				"2b3b9115-1ed6-4628-b72f-d2fbb30c9bb6",
+				"b7854824-a2d8-4fe1-8f5c-975a6e84d0c1"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "44398236-17ff-406a-8e77-883f72e9a797",
+			"name": "formal_courses",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"729bdbb4-49a8-4186-9beb-45ae066b1527",
+				"032ddca3-7ca7-46f9-9fba-c952e409fadf",
+				"cf377d28-0abc-4b3f-b090-8b01d0f288ae",
+				"35080aa7-d202-4241-8754-dede6d33bb26",
+				"0d2f739e-ce1a-4332-a946-c02e9e43d175",
+				"73fd4b94-b9e7-4791-b3b3-3a841f68e0ab"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "74023d25-8c35-4513-913b-21485db0ced6",
+			"name": "info",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"7b5d7ebc-cefe-40e4-8a83-04d9064a6989",
+				"7daf0971-8347-4638-8d62-98d44a442b89"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"name": "trial_courses",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"70c31f1d-2614-48c9-8fff-d325254b04dd",
+				"560aa8c9-8b86-4c68-a7e2-f5427742ffec",
+				"9e238916-3a7d-41e4-98cc-e3295df1e00e",
+				"7002119f-8880-4e84-bd21-c7903fab21f2",
+				"ba1a6462-c7fa-44d5-a3ed-3c7a54887b16",
+				"f5bee2cf-ffd7-4a27-84a4-2fc3746e138d"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "31b6232e-c468-4a67-9fb6-4c8e2a3f8b33",
+			"name": "uploads",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"132226ce-5141-478c-a745-2c9f05836875",
+				"b9e73df8-7660-4eb6-9e20-d15700af0612",
+				"11d0bacf-22b9-49b3-99f9-839eb3de56e2"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+			"name": "users",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"0cee5d05-bb92-4fe0-b29c-5be41649fa38",
+				"f422d0b9-92ed-419f-81ab-11d2c92681e4",
+				"a8769be6-fcd3-4f23-bccf-82749529a41b",
+				"f6d56afb-7cd1-4571-a41e-79a950b95e30",
+				"84589308-6ef3-46dd-a89a-8dffb15ecedd"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"name": "videos",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"e18f9a43-ac50-440b-9d56-05dc9aab7170",
+				"49e389e2-b00e-4c94-97db-10819a369a93",
+				"942a2ab1-e071-4694-9f60-c5ebf293e520",
+				"ec0a4630-0e95-4cd8-bd6c-3f9eff50f4f4",
+				"898c7db9-3b9c-4638-8c34-e6d92351fa19",
+				"51104f9e-ce39-41e4-8fcf-5bf7ce5c52ae"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "032ddca3-7ca7-46f9-9fba-c952e409fadf",
+			"name": "正式课添加",
+			"url": "think.book.com/admin/api/v1/formal-courses/store",
+			"description": "",
+			"data": [
+				{
+					"key": "name",
+					"value": "ahjskdh",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "sjflksjflkdsfsdf",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0cee5d05-bb92-4fe0-b29c-5be41649fa38",
+			"name": "获取用户列表",
+			"url": "think.book.com/admin/api/v1/users/list?s6=1",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": null,
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "s5",
+					"value": "2020-02-01_2020-05-01",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s10",
+					"value": "_0",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "page",
+					"value": "2",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s6",
+					"value": "1",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				},
+				{
+					"key": "s8",
+					"value": "_2020-06-01",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s10",
+					"value": "2_",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s5",
+					"value": "2010-12-02 21:33:32_2020-10-22 20:33:12",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0d2f739e-ce1a-4332-a946-c02e9e43d175",
+			"name": "获取正式课列表",
+			"url": "think.book.com/admin/api/v1/formal-courses/list?s2=1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "s2",
+					"value": "1",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0facc466-2813-4feb-aff0-d7ab8e375616",
+			"name": "用户名检查",
+			"url": "think.book.com/admin/api/v1/admins/check-username ",
+			"description": "",
+			"data": [
+				{
+					"key": "username",
+					"value": "admin1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "6d21ceb7-6ddc-46c8-9879-bad739249640",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "119e2f23-18f1-420e-ad90-09ec3a39c2d2",
+			"name": "活动添加",
+			"url": "think.book.com/admin/api/v1/activities/store",
+			"description": null,
+			"data": [
+				{
+					"key": "title",
+					"value": "ceshi",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "测试股氨基酸看到",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "/static/uploads/image/20200609/e77c477218c900132fd09b8b3eb40d33.png",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "kind",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzkxMTIyLCJleHAiOjE1OTE4MTk5MjIsInVpZCI6IjEifQ.695QYA2nQcKmh99PP6eNUj15Xp6fUNEDaOa2pZ-DyB4",
+					"description": null,
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "9b563959-f384-4019-b923-356f35c87973",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzkxMTIyLCJleHAiOjE1OTE4MTk5MjIsInVpZCI6IjEifQ.695QYA2nQcKmh99PP6eNUj15Xp6fUNEDaOa2pZ-DyB4\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "11d0bacf-22b9-49b3-99f9-839eb3de56e2",
+			"name": "excel文件上传",
+			"url": "think.book.com/admin/api/v1/uploads/excel",
+			"description": "",
+			"data": [
+				{
+					"key": "excel",
+					"value": "/C:/Users/Administrator/Desktop/测试.xls",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMjU4OTI0LCJleHAiOjE1OTMyODc3MjQsInVpZCI6IjEifQ.41oNxAbGVZ39bRZN98knI42jVDxqbGcIvY3V1rAv1rM"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "31b6232e-c468-4a67-9fb6-4c8e2a3f8b33",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMjU4OTI0LCJleHAiOjE1OTMyODc3MjQsInVpZCI6IjEifQ.41oNxAbGVZ39bRZN98knI42jVDxqbGcIvY3V1rAv1rM\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "132226ce-5141-478c-a745-2c9f05836875",
+			"name": "图片文件上传",
+			"url": "think.book.com/admin/api/v1/uploads/image",
+			"description": "",
+			"data": [
+				{
+					"key": "images[]",
+					"value": "/D:/wwwroot/chinesechess.cn-vue/src/assets/logo.png",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "images[]",
+					"value": "/D:/wwwroot/chinesechess.cn-vue/public/img/icons/safari-pinned-tab.svg",
+					"description": "",
+					"type": "file",
+					"enabled": false
+				},
+				{
+					"key": "images[]",
+					"value": "/E:/games/SteamApps/steamapps/workshop/content/431960/1728013300/preview.jpg",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "31b6232e-c468-4a67-9fb6-4c8e2a3f8b33",
+			"pathVariables": {}
+		},
+		{
+			"id": "19226bc1-33d1-4c22-9d75-79405dbd675b",
+			"name": "广告更新",
+			"url": "think.book.com/admin/api/v1/ads/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "2313",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "content",
+					"value": "sjlkajsdl",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "asdasdasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2b3b9115-1ed6-4628-b72f-d2fbb30c9bb6",
+			"name": "书单更新",
+			"url": "think.book.com/admin/api/v1/books/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "2313",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "content",
+					"value": "sjlkajsdl",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "asdasdasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "35080aa7-d202-4241-8754-dede6d33bb26",
+			"name": "正式课删除",
+			"url": "think.book.com/admin/api/v1/formal-courses/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "6",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3f588b25-67e1-4d31-8790-3414c16d218f",
+			"name": "活动删除",
+			"url": "think.book.com/admin/api/v1/activities/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "ids[]",
+					"value": "4",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "9b563959-f384-4019-b923-356f35c87973",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "465abc00-d779-411b-bcfc-b6f015292140",
+			"name": "书单上传",
+			"url": "think.book.com/admin/api/v1/books/import",
+			"description": "",
+			"data": [
+				{
+					"key": "excel",
+					"value": "/static/uploads/excel/20200627/202529fd375ea1638cbfc966fb8728c9.xls",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "task_name",
+					"value": "123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "测试",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMjU4OTI0LCJleHAiOjE1OTMyODc3MjQsInVpZCI6IjEifQ.41oNxAbGVZ39bRZN98knI42jVDxqbGcIvY3V1rAv1rM"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMjU4OTI0LCJleHAiOjE1OTMyODc3MjQsInVpZCI6IjEifQ.41oNxAbGVZ39bRZN98knI42jVDxqbGcIvY3V1rAv1rM\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "49e389e2-b00e-4c94-97db-10819a369a93",
+			"name": "视频软删除",
+			"url": "think.book.com/admin/api/v1/videos/delete",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "6",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "7",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "51104f9e-ce39-41e4-8fcf-5bf7ce5c52ae",
+			"name": "视频信息获取",
+			"url": "think.book.com/admin/api/v1/videos/info?id=2",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "560aa8c9-8b86-4c68-a7e2-f5427742ffec",
+			"name": "获取试听课列表",
+			"url": "think.book.com/admin/api/v1/trial-courses/list?s2=1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "s2",
+					"value": "1",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "62ec6656-e21a-4781-8590-99254752e5bc",
+			"name": "添加用户",
+			"url": "think.book.com/admin/api/v1/admins/store",
+			"description": "",
+			"data": [
+				{
+					"key": "username",
+					"value": "admin1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "6d21ceb7-6ddc-46c8-9879-bad739249640",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "678cf200-0de1-486f-a62e-02fbe409bf6c",
+			"name": "活动列表获取",
+			"url": "think.book.com/admin/api/v1/activities/list?s3=2010-01-22_2020-09-02&kind=2",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": null,
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "s1",
+					"value": "111",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s2",
+					"value": "0",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s3",
+					"value": "2010-01-22_2020-09-02",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "kind",
+					"value": "2",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "9b563959-f384-4019-b923-356f35c87973",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "69febede-f967-436f-9a02-5ebc6be54bbd",
+			"name": "获取广告列表",
+			"url": "think.book.com/admin/api/v1/ads/list",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7002119f-8880-4e84-bd21-c7903fab21f2",
+			"name": "试听课添加",
+			"url": "think.book.com/admin/api/v1/trial-courses/store",
+			"description": "",
+			"data": [
+				{
+					"key": "name",
+					"value": "ahjskdh",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "sjflksjflkdsfsdf",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "70c31f1d-2614-48c9-8fff-d325254b04dd",
+			"name": "获取试听课信息",
+			"url": "think.book.com/admin/api/v1/trial-courses/info?id=1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "729bdbb4-49a8-4186-9beb-45ae066b1527",
+			"name": "正式课更新",
+			"url": "think.book.com/admin/api/v1/formal-courses/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "3123大大",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMjU4OTI0LCJleHAiOjE1OTMyODc3MjQsInVpZCI6IjEifQ.41oNxAbGVZ39bRZN98knI42jVDxqbGcIvY3V1rAv1rM"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMjU4OTI0LCJleHAiOjE1OTMyODc3MjQsInVpZCI6IjEifQ.41oNxAbGVZ39bRZN98knI42jVDxqbGcIvY3V1rAv1rM\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "73fd4b94-b9e7-4791-b3b3-3a841f68e0ab",
+			"name": "获取正式课信息",
+			"url": "think.book.com/admin/api/v1/formal-courses/info?id=2",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7b5d7ebc-cefe-40e4-8a83-04d9064a6989",
+			"name": "获取企业信息",
+			"url": "think.book.com/admin/api/v1/info/info",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNjI0MDI0LCJleHAiOjE1OTE2NTI4MjQsInVpZCI6IjEifQ.qhXWeJ6uSdbejdvfJ1eoGE7CJKwwVat9_XDjj03hkho",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "74023d25-8c35-4513-913b-21485db0ced6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNjI0MDI0LCJleHAiOjE1OTE2NTI4MjQsInVpZCI6IjEifQ.qhXWeJ6uSdbejdvfJ1eoGE7CJKwwVat9_XDjj03hkho\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7daf0971-8347-4638-8d62-98d44a442b89",
+			"name": "更新企业信息",
+			"url": "think.book.com/admin/api/v1/info/change",
+			"description": "",
+			"data": [
+				{
+					"key": "name",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lat",
+					"value": "12312.12334",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lng",
+					"value": "7318.213231",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "asdjkhkaj啊是多久啊客户机",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "7812313",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "company_culture",
+					"value": "阿斯顿",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNjI0MDI0LCJleHAiOjE1OTE2NTI4MjQsInVpZCI6IjEifQ.qhXWeJ6uSdbejdvfJ1eoGE7CJKwwVat9_XDjj03hkho",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "74023d25-8c35-4513-913b-21485db0ced6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNjI0MDI0LCJleHAiOjE1OTE2NTI4MjQsInVpZCI6IjEifQ.qhXWeJ6uSdbejdvfJ1eoGE7CJKwwVat9_XDjj03hkho\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "84589308-6ef3-46dd-a89a-8dffb15ecedd",
+			"name": "更改用户教师标签",
+			"url": "think.book.com/admin/api/v1/users/change-teacher",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "i_teacher",
+					"value": "0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "898c7db9-3b9c-4638-8c34-e6d92351fa19",
+			"name": "视频列表获取",
+			"url": "think.book.com/admin/api/v1/videos/list?s3=2010-01-22_2020-02-02",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": null,
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "s1",
+					"value": "111",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s2",
+					"value": "0",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "s3",
+					"value": "2010-01-22_2020-02-02",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "942a2ab1-e071-4694-9f60-c5ebf293e520",
+			"name": "视频删除",
+			"url": "think.book.com/admin/api/v1/videos/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9a189896-26f0-43ff-ab79-5a8555e07270",
+			"name": "查看书单详情",
+			"url": "think.book.com/admin/api/v1/books/info?id=9",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"description": null,
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "9",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9ad20e0c-f37a-4e6d-80ba-57e20c8a06b3",
+			"name": "查看广告详情",
+			"url": "think.book.com/admin/api/v1/ads/info?id=9",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": null,
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "9",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9e238916-3a7d-41e4-98cc-e3295df1e00e",
+			"name": "试听课软删除",
+			"url": "think.book.com/admin/api/v1/trial-courses/delete",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a0137ad4-8ec2-4915-afc2-7084d6953e6a",
+			"name": "书单软删除",
+			"url": "think.book.com/admin/api/v1/books/delete",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "ids[]",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a5379417-3b99-4bbd-a6e9-0ad771b0903e",
+			"name": "活动更新",
+			"url": "think.book.com/admin/api/v1/activities/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "sdasda",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "213asdsdasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "kind",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "asldjkjhasj",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "9b563959-f384-4019-b923-356f35c87973",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a8769be6-fcd3-4f23-bccf-82749529a41b",
+			"name": "更改用户借阅vip相关",
+			"url": "think.book.com/admin/api/v1/users/change-book-vip",
+			"description": "think.book.com/admin/api/v1/users/change-vip",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "vip",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "balance",
+					"value": "0.1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ended_at",
+					"value": "2020-06-02",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ae6464a3-d769-466a-aa24-153150ed41e8",
+			"name": "活动软删除",
+			"url": "think.book.com/admin/api/v1/activities/delete",
+			"description": "",
+			"data": [
+				{
+					"key": "ids",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "7",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "9b563959-f384-4019-b923-356f35c87973",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b57d929b-a2a7-4452-b02c-74ad8fb1d914",
+			"name": "用户登录",
+			"url": "think.book.com/admin/api/v1/auth/login",
+			"description": null,
+			"data": [
+				{
+					"key": "username",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b7854824-a2d8-4fe1-8f5c-975a6e84d0c1",
+			"name": "书单添加",
+			"url": "think.book.com/admin/api/v1/books/store",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "name",
+					"value": "2313",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "number",
+					"value": "123123123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "barcode",
+					"value": "12312asd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b9e73df8-7660-4eb6-9e20-d15700af0612",
+			"name": "视频文件上传",
+			"url": "think.book.com/admin/api/v1/uploads/video",
+			"description": "",
+			"data": [
+				{
+					"key": "video",
+					"value": "/E:/games/SteamApps/steamapps/workshop/content/431960/1728013300/Ada Wong +18.mp4",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMDE2NDg2LCJleHAiOjE1OTEwNDUyODYsInVpZCI6IjEifQ.U2cTKcVSfWfJ7XbZ8GwGUIoa1KBjj_SwFQgVI97p-zg",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "31b6232e-c468-4a67-9fb6-4c8e2a3f8b33",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMDE2NDg2LCJleHAiOjE1OTEwNDUyODYsInVpZCI6IjEifQ.U2cTKcVSfWfJ7XbZ8GwGUIoa1KBjj_SwFQgVI97p-zg\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ba1a6462-c7fa-44d5-a3ed-3c7a54887b16",
+			"name": "试听课更新",
+			"url": "think.book.com/admin/api/v1/trial-courses/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "3123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "be54cc14-e3b4-4174-b0f8-6d924d136d98",
+			"name": "广告添加",
+			"url": "think.book.com/admin/api/v1/ads/store",
+			"description": "",
+			"data": [
+				{
+					"key": "url",
+					"value": "/static/uploads/image/20200531/11bfd5415d095db38a3a5a1a1fd7bc3f.png",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "图片1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "测试",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cc1de73b-f1db-432e-a06e-b0fef92f682b",
+			"name": "活动信息获取",
+			"url": "think.book.com/admin/api/v1/activities/info?id=1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "9b563959-f384-4019-b923-356f35c87973",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cf377d28-0abc-4b3f-b090-8b01d0f288ae",
+			"name": "正式课软删除",
+			"url": "think.book.com/admin/api/v1/formal-courses/delete",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d52e5ecc-d2d2-4f0d-b957-fb9a1b927281",
+			"name": "书单删除",
+			"url": "think.book.com/admin/api/v1/books/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "ids[]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "db49ff25-e48a-4434-9b84-04f284ba2e13",
+			"name": "获取书单列表",
+			"url": "think.book.com/admin/api/v1/books/list",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "de80d6d9-9858-4676-a277-d0f512f5d341",
+			"name": "广告删除",
+			"url": "think.book.com/admin/api/v1/ads/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "ids[]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e18f9a43-ac50-440b-9d56-05dc9aab7170",
+			"name": "视频添加",
+			"url": "think.book.com/admin/api/v1/videos/store",
+			"description": "",
+			"data": [
+				{
+					"key": "name",
+					"value": "ceshi",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "测试股氨基酸看到",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "/static/uploads/video/20200601/89e892e7c0152c2982fb569f6b22a094.mp4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ec0a4630-0e95-4cd8-bd6c-3f9eff50f4f4",
+			"name": "视频更新",
+			"url": "think.book.com/admin/api/v1/videos/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "`121`2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "213asdsdasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "asldjkjhasj",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "a0266036-3b0c-4723-a1f8-0c55d8552c7c",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f422d0b9-92ed-419f-81ab-11d2c92681e4",
+			"name": "用户信息查询",
+			"url": "think.book.com/admin/api/v1/users/info?id=1",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f5bee2cf-ffd7-4a27-84a4-2fc3746e138d",
+			"name": "试听课删除",
+			"url": "think.book.com/admin/api/v1/trial-courses/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "f4f015dc-6f9f-44ab-9884-dac19b2c8563",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f6d56afb-7cd1-4571-a41e-79a950b95e30",
+			"name": "更改用户课时vip相关",
+			"url": "think.book.com/admin/api/v1/users/change-class-vip",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "vip",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "balance",
+					"value": "12",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		}
+	]
+}

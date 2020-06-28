@@ -87,8 +87,10 @@ class Books extends Base
         $current_page = $get['page'] ?? 1;
         $res = Db::name('books')
             ->alias('books')
-            ->field('books.*, admins.username')
+            ->field('books.id, books.name, number, num, barcode, isbn, author, publishing, cover, price, collection, room, shelf, status, uploaded_at, books.added_at, books.updated_at, admins.username, generations.name as generations_name, tasks.name as tasks_name')
             ->join('admins admins', 'admins.id = books.adminid')
+            ->join('generations generations', 'generations.id = books.generationid', 'left')
+            ->join('tasks tasks', 'tasks.id = books.taskid', 'left')
             ->where($this->getFilters($get))
             ->order('books.added_at desc')
             ->paginate(null, false, [
@@ -111,14 +113,15 @@ class Books extends Base
      */
     protected function getFilters($params = [])
     {
-        $this->fields = ['wd', 's1', 's2', 's3'];
+        $this->fields = ['wd', 's1', 's2', 's3', 's4'];
         $filters = [];
         $this->setConditions($params);
 
         if ($this->conditions['wd']) $filters['books.name'] = ['like', '%' . $this->conditions['wd'] . '%'];
         if ($this->conditions['s1']) $filters['books.name'] = $this->conditions['s1'];
-        if ($this->conditions['s2']) $filters['books.status'] = $this->conditions['s2'];
-        if ($this->conditions['s3']) $filters['books.added_at'] = $this->setBetweenFilter($this->conditions['s3']);
+        if ($this->conditions['s2']) $filters['books.generationid'] = $this->conditions['s2'];
+        if ($this->conditions['s3']) $filters['books.barcode'] = $this->conditions['s3'];
+        if ($this->conditions['s4']) $filters['books.taskid'] = $this->conditions['s4'];
 
         return $filters;
     }
@@ -132,8 +135,10 @@ class Books extends Base
     {
         $data = Db::name('books')
             ->alias('books')
-            ->field('books.*, admins.username')
+            ->field('books.id, books.name, number, num, barcode, isbn, author, publishing, cover, price, collection, room, shelf, status, description, content, uploaded_at, books.added_at, books.updated_at, generationid, admins.username, generations.name as generations_name, tasks.name as tasks_name')
             ->join('admins admins', 'admins.id = books.adminid')
+            ->join('generations generations', 'generations.id = books.generationid', 'left')
+            ->join('tasks tasks', 'tasks.id = books.taskid', 'left')
             ->find($id);
 
         exit(ajax_return_ok($data));
@@ -158,13 +163,6 @@ class Books extends Base
         $ids = $post['ids'];
 
         if (!is_array($ids)) $ids = [$ids];
-
-        $urls = Db::name('videos')
-            ->where(['id' => ['in', $ids]])
-            ->column('url');
-        $urls = array_filter($urls);
-
-        foreach ($urls as $url) @unlink(ROOT_PATH . 'public' . $url);
         if (BooksModel::destroy($ids)) exit(ajax_return_ok());
 
         exit(ajax_return_error('sql_error'));
@@ -207,11 +205,18 @@ class Books extends Base
 
         $post = Request::instance()->post();
         $result = $this->validate($post, [
-            'url'    => 'require',
-            'status' => 'in:1,2'
+            'name'    => 'require',
+            'number'  => 'require',
+            'barcode' => 'require',
+            'status'  => 'in:1,2'
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        // 添加默认封面
+        if (!isset($post['cover']) || !$post['cover']) {
+            $post['cover'] = Env::get('books.default_cover');
+        }
 
         $books = new BooksModel($post);
         $post['adminid'] = $this->uid;
@@ -233,15 +238,24 @@ class Books extends Base
 
         $post = Request::instance()->post();
         $result = $this->validate($post, [
-            'id'     => 'require',
-            'status' => 'require|in:1,2',
-            'url'    => 'require'
+            'id'      => 'require',
+            'status'  => 'require|in:1,2',
+            'cover'   => 'require',
+            'name'    => 'require',
+            'number'  => 'require',
+            'barcode' => 'require',
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $books = BooksModel::get($post['id']);
-        $res = $books->allowField(['url', 'name', 'content', 'status'])->save($post);
+
+        // 更新上架
+        if ($books->status != $post['status'] && $post['status'] == 2) {
+            $post['uploaded_at'] = date('Y-m-d H:i:s');
+        }
+
+        $res = $books->allowField(['name', 'number', 'num', 'barcode', 'isbn', 'author', 'publishing', 'cover', 'price', 'description', 'content', 'collection', 'room', 'shelf', 'generationid', 'status', 'uploaded_at'])->save($post);
 
         if ($res) exit(ajax_return_ok());
 
