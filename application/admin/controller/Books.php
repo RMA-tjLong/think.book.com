@@ -43,7 +43,7 @@ class Books extends Base
             $tasks->added_at = $added_at;
             $tasks->save();
             $taskid = $tasks->id;
-    
+
             foreach ($excel_data as $i => $row) {
                 if ($i < 2) continue; // 第一排省略
                 $data[] = [
@@ -64,7 +64,7 @@ class Books extends Base
                     'adminid'    => $this->uid,                        // 操作人id
                 ];
             }
-    
+
             $books = new BooksModel;
             $books->saveAll($data);
             Db::commit();
@@ -72,7 +72,7 @@ class Books extends Base
             exit(ajax_return_error('excel_error'));
             Db::rollback();
         }
-        
+
         exit(ajax_return_ok());
     }
 
@@ -259,6 +259,79 @@ class Books extends Base
 
         if ($res) exit(ajax_return_ok());
 
+        exit(ajax_return_error('sql_error'));
+    }
+
+    /**
+     * 全部上架
+     *
+     * @return void
+     */
+    public function uploadAll()
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $uploaded_at = date('Y-m-d H:i:s');
+        $res = Db::name('books')->where(['status' => 1])->update(['status' => 2, 'uploaded_at' => $uploaded_at]);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
+
+    /**
+     * 批量上架
+     *
+     * @return void
+     */
+    public function uploadBatch()
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'ids' => 'require',
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $ids = $post['ids'];
+
+        if (!is_array($ids)) $ids = [$ids];
+
+        $uploaded_at = date('Y-m-d H:i:s');
+        $res = BooksModel::where(['id' => ['in', $ids], 'status' => 1])->update(['status' => 2, 'uploaded_at' => $uploaded_at]);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
+    }
+
+    /**
+     * 批量更改年龄段
+     *
+     * @return void
+     */
+    public function changeGenerationBatch()
+    {
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'ids'          => 'require',
+            'generationid' => 'require'
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $ids = $post['ids'];
+
+        if (!is_array($ids)) $ids = [$ids];
+
+        $res = BooksModel::where(['id' => ['in', $ids]])->update(['generationid' => $post['generationid']]);
+
+        if ($res) exit(ajax_return_ok());
+        
         exit(ajax_return_error('sql_error'));
     }
 }

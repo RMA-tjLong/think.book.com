@@ -93,7 +93,7 @@ Route::group('admin', function () {
                 ]);
             });
 
-            Route::group('info', function() {
+            Route::group('info', function () {
                 Route::get([
                     'info' => 'Info/info'  // 获取企业信息
                 ]);
@@ -117,24 +117,40 @@ Route::group('admin', function () {
                 ]);
             });
 
-            Route::group('admins', function() {
+            Route::group('admins', function () {
                 Route::post([
                     'check-username' => 'Admins/checkUsername',   // 检查用户名是否存在
                     'store'          => 'Admins/store',           // 添加管理员
                 ]);
             });
 
-            Route::group('books', function() {
+            Route::group('books', function () {
                 Route::get([
                     'list' => 'Books/list',   // 获取书单列表
                     'info' => 'Books/info',   // 查看书单详情
                 ]);
+
                 Route::post([
-                    'import' => 'Books/import',   // 上传书单
-                    'drop'   => 'Books/drop',     // 删除书单
-                    'delete' => 'Books/delete',   // 软删除书单
-                    'store'  => 'Books/store',    // 添加书单
-                    'change' => 'Books/update',   // 更新书单
+                    'import'                  => 'Books/import',                // 上传书单
+                    'drop'                    => 'Books/drop',                  // 删除书单
+                    'delete'                  => 'Books/delete',                // 软删除书单
+                    'store'                   => 'Books/store',                 // 添加书单
+                    'change'                  => 'Books/update',                // 更新书单
+                    'upload-all'              => 'Books/uploadAll',             // 全部上架
+                    'upload-batch'            => 'Books/uploadBatch',           // 批量上架
+                    'change-generation-batch' => 'Books/changeGenerationBatch'  // 批量更新年龄段
+                ]);
+            });
+
+            Route::group('generations', function () {
+                Route::get([
+                    'list' => 'Generations/list',   // 获取年龄段列表
+                ]);
+
+                Route::post([
+                    'drop'   => 'Generations/drop',     // 删除年龄段
+                    'store'  => 'Generations/store',    // 添加年龄段
+                    'change' => 'Generations/update',   // 更新年龄段
                 ]);
             });
 

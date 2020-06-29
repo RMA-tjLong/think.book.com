@@ -11,6 +11,7 @@
 	"folders_order": [
 		"e7a51a0a-20a9-423d-95d5-a261bf0dfae4",
 		"d6bd0095-364a-4bd5-b827-0636439db2f6",
+		"97076c69-1cd6-4c93-a5f6-8309664be150",
 		"7367e25f-be50-40f1-bc1a-80b0e6736755",
 		"31b6232e-c468-4a67-9fb6-4c8e2a3f8b33",
 		"a0266036-3b0c-4723-a1f8-0c55d8552c7c",
@@ -88,7 +89,10 @@
 				"d52e5ecc-d2d2-4f0d-b957-fb9a1b927281",
 				"a0137ad4-8ec2-4915-afc2-7084d6953e6a",
 				"2b3b9115-1ed6-4628-b72f-d2fbb30c9bb6",
-				"b7854824-a2d8-4fe1-8f5c-975a6e84d0c1"
+				"b7854824-a2d8-4fe1-8f5c-975a6e84d0c1",
+				"3d5a80e1-e6ee-4e94-b40a-5e58471ad78d",
+				"cb84120a-cdc5-4227-a2e7-201be199e5a4",
+				"6830edac-941a-4e2e-9143-bbcf73052506"
 			],
 			"folders_order": [],
 			"protocolProfileBehavior": {}
@@ -108,6 +112,23 @@
 				"35080aa7-d202-4241-8754-dede6d33bb26",
 				"0d2f739e-ce1a-4332-a946-c02e9e43d175",
 				"73fd4b94-b9e7-4791-b3b3-3a841f68e0ab"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "97076c69-1cd6-4c93-a5f6-8309664be150",
+			"name": "generations",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6fae039c-6e76-4268-97d6-bd6bb805e8ef",
+			"folder": null,
+			"order": [
+				"9a2de581-58cb-4a38-8db7-7d4eecfdc6af",
+				"94ee8af1-20fd-4bf6-aca0-d75a18f0e0ff",
+				"6dfbd3b3-304c-4fc4-b634-b72f16f4b2df",
+				"916fd22f-7871-4e3e-8154-7d5698c25c6b"
 			],
 			"folders_order": [],
 			"protocolProfileBehavior": {}
@@ -596,7 +617,7 @@
 			"data": [
 				{
 					"key": "id",
-					"value": "9",
+					"value": "27",
 					"description": "",
 					"type": "text",
 					"enabled": true
@@ -606,7 +627,7 @@
 					"value": "2313",
 					"description": "",
 					"type": "text",
-					"enabled": false
+					"enabled": true
 				},
 				{
 					"key": "content",
@@ -616,8 +637,29 @@
 					"enabled": true
 				},
 				{
-					"key": "url",
+					"key": "cover",
 					"value": "asdasdasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "number",
+					"value": "uywyiqwe",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "barcode",
+					"value": "123123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "2",
 					"description": "",
 					"type": "text",
 					"enabled": true
@@ -689,6 +731,61 @@
 			"events": null,
 			"folder": "44398236-17ff-406a-8e77-883f72e9a797",
 			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNTM2NjU5LCJleHAiOjE1OTE1NjU0NTksInVpZCI6IjEifQ.d35YkVAiJtHLk8Yb1TLlJFIsfwFAbQLpUKfTg955kH0\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3d5a80e1-e6ee-4e94-b40a-5e58471ad78d",
+			"name": "书单批量上架",
+			"url": "think.book.com/admin/api/v1/books/upload-batch",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "number",
+					"value": "123123123",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "barcode",
+					"value": "12312asd",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
 			"pathVariables": {}
 		},
 		{
@@ -997,6 +1094,61 @@
 			"pathVariables": {}
 		},
 		{
+			"id": "6830edac-941a-4e2e-9143-bbcf73052506",
+			"name": "书单批量更新年龄段",
+			"url": "think.book.com/admin/api/v1/books/change-generation-batch",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "6",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "generationid",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "barcode",
+					"value": "12312asd",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
+			"pathVariables": {}
+		},
+		{
 			"id": "69febede-f967-436f-9a02-5ebc6be54bbd",
 			"name": "获取广告列表",
 			"url": "think.book.com/admin/api/v1/ads/list",
@@ -1020,6 +1172,61 @@
 			"events": null,
 			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
 			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxNzA2Njg0LCJleHAiOjE1OTE3MzU0ODQsInVpZCI6IjEifQ.CiP_yISTuE_4Qb_HTnsaKeF_KtN0LjVbXVszxh2xT8M\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6dfbd3b3-304c-4fc4-b634-b72f16f4b2df",
+			"name": "年龄段删除",
+			"url": "think.book.com/admin/api/v1/generations/drop",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "ids[]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "ids[]",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "97076c69-1cd6-4c93-a5f6-8309664be150",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
 			"pathVariables": {}
 		},
 		{
@@ -1376,6 +1583,61 @@
 			"pathVariables": {}
 		},
 		{
+			"id": "916fd22f-7871-4e3e-8154-7d5698c25c6b",
+			"name": "年龄段更新",
+			"url": "think.book.com/admin/api/v1/generations/change",
+			"description": "",
+			"data": [
+				{
+					"key": "id",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "2313",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "sjlkajsdl",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "url",
+					"value": "asdasdasd",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "97076c69-1cd6-4c93-a5f6-8309664be150",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
+			"pathVariables": {}
+		},
+		{
 			"id": "942a2ab1-e071-4694-9f60-c5ebf293e520",
 			"name": "视频删除",
 			"url": "think.book.com/admin/api/v1/videos/drop",
@@ -1424,6 +1686,54 @@
 			"pathVariables": {}
 		},
 		{
+			"id": "94ee8af1-20fd-4bf6-aca0-d75a18f0e0ff",
+			"name": "年龄段添加",
+			"url": "think.book.com/admin/api/v1/generations/store",
+			"description": "",
+			"data": [
+				{
+					"key": "url",
+					"value": "/static/uploads/image/20200531/11bfd5415d095db38a3a5a1a1fd7bc3f.png",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "name",
+					"value": "图片1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "content",
+					"value": "测试",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "97076c69-1cd6-4c93-a5f6-8309664be150",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
+			"pathVariables": {}
+		},
+		{
 			"id": "9a189896-26f0-43ff-ab79-5a8555e07270",
 			"name": "查看书单详情",
 			"url": "think.book.com/admin/api/v1/books/info?id=9",
@@ -1455,6 +1765,32 @@
 			"events": null,
 			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
 			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9a2de581-58cb-4a38-8db7-7d4eecfdc6af",
+			"name": "获取年龄段列表",
+			"url": "think.book.com/admin/api/v1/generations/list",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "97076c69-1cd6-4c93-a5f6-8309664be150",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
 			"pathVariables": {}
 		},
 		{
@@ -1837,7 +2173,7 @@
 					"enabled": true,
 					"key": "token",
 					"type": "text",
-					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU"
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
 				}
 			],
 			"method": "POST",
@@ -1846,7 +2182,7 @@
 			"auth": null,
 			"events": null,
 			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
-			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzMzQ2ODQ4LCJleHAiOjE1OTMzNzU2NDgsInVpZCI6IjEifQ.XZLUiKIVRVyE78v7UDWaQJhtTkXEO-lEioTasQvC2cU\n",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
 			"pathVariables": {}
 		},
 		{
@@ -1977,6 +2313,61 @@
 			"events": null,
 			"folder": "d6bd0095-364a-4bd5-b827-0636439db2f6",
 			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkxMTg5ODkxLCJleHAiOjE1OTEyMTg2OTEsInVpZCI6IjEifQ.1846EMZY04EphbXPKGlpriAONaDCWDXiFFt9-Pn4-yw\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cb84120a-cdc5-4227-a2e7-201be199e5a4",
+			"name": "书单全部上架",
+			"url": "think.book.com/admin/api/v1/books/upload-all",
+			"description": "",
+			"data": [
+				{
+					"key": "ids[]",
+					"value": "9",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "ids[]",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "number",
+					"value": "123123123",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "barcode",
+					"value": "12312asd",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "token",
+					"type": "text",
+					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "7367e25f-be50-40f1-bc1a-80b0e6736755",
+			"headers": "token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0aGluay5ib29rLmNvbSIsImF1ZCI6InRoaW5rLmJvb2suY29tIiwiaWF0IjoxNTkzNDM2OTI3LCJleHAiOjE1OTM0NjU3MjcsInVpZCI6IjEifQ.FRjqlQ1weCBKYNbSEvCFoyBRpo0KSFMMXw-JbX-97ZY\n",
 			"pathVariables": {}
 		},
 		{

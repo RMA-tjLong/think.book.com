@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2020-06-28 21:41:27
+Date: 2020-06-29 22:09:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -136,35 +136,37 @@ CREATE TABLE `bk_books` (
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_books
 -- ----------------------------
 INSERT INTO `bk_books` VALUES ('2', '揭秘小世界（森林）', '168800192', '1', '9787541765339', '7541765333', '张双叶', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '4', '1', '0', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('3', '揭秘小世界（四季）', '168800191', '1', '9787541765230', '7541765236', '权慧娟', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('4', '汽车多多多！', '168800004', '1', '9787505632639', '7505632639', '石哲元', '', '/static/files/book-default-cover.png', '29.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('6', '爸爸出门以后......', '168800303', '1', '9787549584482', '7549584486', '伊莎贝尔', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('7', '影子飞机', '168800213', '1', '9787533289843', '7533289846', '五味太郎', '', '/static/files/book-default-cover.png', '33.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('8', '揭秘丛林', '168800186', '1', '9787545065770', '7545065778', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('10', '揭秘夜晚', '168800187', '1', '9787545065787', '7545065786', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('11', '揭秘动物', '168800188', '1', '9787545068993', '7545068998', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('12', '早识300字', '168800204', '1', '9787538623857', '753862385x', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('13', '大字百家姓', '168800203', '1', '9787538640830', '7538640835', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '4', '1', '1', null, '2020-06-27 21:34:17', '2020-06-27 21:34:17');
-INSERT INTO `bk_books` VALUES ('14', '揭秘小世界（城市）', '168800185', '1', '9787541765247', '7541765244', '张双', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('15', '揭秘小世界（森林）', '168800192', '1', '9787541765339', '7541765333', '张双叶', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('16', '揭秘小世界（四季）', '168800191', '1', '9787541765230', '7541765236', '权慧娟', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('17', '汽车多多多！', '168800004', '1', '9787505632639', '7505632639', '石哲元', '', '/static/files/book-default-cover.png', '29.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('18', '五颜六色的公交车', '168800297', '1', '9787559618917', '755961891x', 'tupera tupera', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('19', '爸爸出门以后......', '168800303', '1', '9787549584482', '7549584486', '伊莎贝尔', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('20', '影子飞机', '168800213', '1', '9787533289843', '7533289846', '五味太郎', '', '/static/files/book-default-cover.png', '33.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('21', '揭秘丛林', '168800186', '1', '9787545065770', '7545065778', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('22', '揭秘自然', '168800190', '1', '9787545068986', '754506898x', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('23', '揭秘夜晚', '168800187', '1', '9787545065787', '7545065786', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('24', '揭秘动物', '168800188', '1', '9787545068993', '7545068998', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('25', '早识300字', '168800204', '1', '9787538623857', '753862385x', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
-INSERT INTO `bk_books` VALUES ('26', '大字百家姓', '168800203', '1', '9787538640830', '7538640835', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '5', '1', '1', null, '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('3', '揭秘小世界（四季）', '168800191', '1', '9787541765230', '7541765236', '权慧娟', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', '3', '4', '1', '2', '2020-06-29 21:23:07', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('4', '汽车多多多！', '168800004', '1', '9787505632639', '7505632639', '石哲元', '', '/static/files/book-default-cover.png', '29.80', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('6', '爸爸出门以后......', '168800303', '1', '9787549584482', '7549584486', '伊莎贝尔', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', '3', '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('7', '影子飞机', '168800213', '1', '9787533289843', '7533289846', '五味太郎', '', '/static/files/book-default-cover.png', '33.80', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('8', '揭秘丛林', '168800186', '1', '9787545065770', '7545065778', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('10', '揭秘夜晚', '168800187', '1', '9787545065787', '7545065786', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('11', '揭秘动物', '168800188', '1', '9787545068993', '7545068998', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('12', '早识300字', '168800204', '1', '9787538623857', '753862385x', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('13', '大字百家姓', '168800203', '1', '9787538640830', '7538640835', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '4', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:34:17', '2020-06-27 21:34:17');
+INSERT INTO `bk_books` VALUES ('14', '揭秘小世界（城市）', '168800185', '1', '9787541765247', '7541765244', '张双', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('15', '揭秘小世界（森林）', '168800192', '1', '9787541765339', '7541765333', '张双叶', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('16', '揭秘小世界（四季）', '168800191', '1', '9787541765230', '7541765236', '权慧娟', '', '/static/files/book-default-cover.png', '49.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('17', '汽车多多多！', '168800004', '1', '9787505632639', '7505632639', '石哲元', '', '/static/files/book-default-cover.png', '29.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('18', '五颜六色的公交车', '168800297', '1', '9787559618917', '755961891x', 'tupera tupera', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('19', '爸爸出门以后......', '168800303', '1', '9787549584482', '7549584486', '伊莎贝尔', '', '/static/files/book-default-cover.png', '34.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('20', '影子飞机', '168800213', '1', '9787533289843', '7533289846', '五味太郎', '', '/static/files/book-default-cover.png', '33.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('21', '揭秘丛林', '168800186', '1', '9787545065770', '7545065778', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('22', '揭秘自然', '168800190', '1', '9787545068986', '754506898x', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('23', '揭秘夜晚', '168800187', '1', '9787545065787', '7545065786', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('24', '揭秘动物', '168800188', '1', '9787545068993', '7545068998', '保罗·维尔', '', '/static/files/book-default-cover.png', '68.80', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('25', '早识300字', '168800204', '1', '9787538623857', '753862385x', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
+INSERT INTO `bk_books` VALUES ('26', '大字百家姓', '168800203', '1', '9787538640830', '7538640835', '赵国强', '', '/static/files/book-default-cover.png', '13.90', null, '', '1', '2', '', null, '5', '1', '2', '2020-06-29 21:23:49', '2020-06-27 21:58:43', '2020-06-27 21:58:43');
 INSERT INTO `bk_books` VALUES ('27', '2313', 'uywyiqwe', '1', '123123', null, null, null, 'asdasdasd', null, null, 'sjlkajsdl', null, null, null, null, null, '1', '2', '2020-06-28 21:33:32', '2020-06-28 21:18:27', '2020-06-28 21:33:32');
+INSERT INTO `bk_books` VALUES ('28', '2313', '123123123', '1', '12312asd', null, null, null, '/static/files/book-default-cover.png', null, null, null, null, null, null, null, null, '1', '1', null, '2020-06-29 21:34:30', '2020-06-29 21:34:30');
+INSERT INTO `bk_books` VALUES ('29', '2313', '123123123', '1', '12312asd', null, null, null, '/static/files/book-default-cover.png', null, null, null, null, null, null, null, null, '1', '1', null, '2020-06-29 21:34:43', '2020-06-29 21:34:43');
 
 -- ----------------------------
 -- Table structure for bk_class_vips
@@ -225,11 +227,12 @@ CREATE TABLE `bk_generations` (
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bk_generations
 -- ----------------------------
+INSERT INTO `bk_generations` VALUES ('2', '2313', '2020-06-29 22:00:11', '2020-06-29 22:01:42');
 
 -- ----------------------------
 -- Table structure for bk_groups

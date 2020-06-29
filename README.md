@@ -533,4 +533,105 @@ generationid 年龄段id，年龄段获取见年龄段接口，选填
 
 >**返回:**
 添加结果
+***
+### 书单全部上架
+>**请求:**
+admin/api/v1/books/upload-all (post)
+
+>**参数:**  
+
+>**返回:**
+上架结果
+***
+### 书单批量上架
+>**请求:**
+admin/api/v1/books/upload-batch (post)
+
+>**参数:**  
+ids/ids[]  
+
+>**返回:**
+上架结果
+***
+### 书单批量更新年龄段
+>**请求:**
+admin/api/v1/books/change-generation-batch (post)
+
+>**参数:**  
+ids/ids[]  
+generationid 年龄段id，由年龄段接口获得  
+
+>**返回:**
+更新结果
+***
+### 年龄段列表
+>**请求:**
+admin/api/v1/generations/list (get)
+
+>**参数:**  
+无分页，直接获取全部，方便书单页面上修改年龄段select使用
+
+>**返回:**
+查询结果
+***
+### 年龄段添加
+>**请求:**
+admin/api/v1/generations/store (post)
+
+>**参数:**  
+name 年龄段名称 必填  
+
+>**返回:**
+查询结果
+***
+### 年龄段编辑
+>**请求:**
+admin/api/v1/generations/change (post)
+
+>**参数:**  
+id 年龄段id 必填  
+name 年龄段名称 必填  
+
+>**返回:**
+查询结果
+***
+### 年龄段删除
+>**请求:**
+admin/api/v1/generations/drop (post)
+
+>**参数:**  
+ids/ids[] 年龄段id 必填  
+
+>**返回:**
+查询结果
+***
+### 上传批次列表
+>**请求:**
+admin/api/v1/tasks/list (get)
+
+>**参数:**  
+
+>**返回:**
+查询结果
+***
+### 上传批次编辑
+>**请求:**
+admin/api/v1/tasks/change (post)
+
+>**参数:**  
+id 上传批次id 必填  
+name 上传批次名称 必填  
+
+>**返回:**
+查询结果
+***
+### 上传批次删除（删除上传批次将删除该上传批次的所有书单）
+>**请求:**
+admin/api/v1/tasks/drop (post)
+
+>**参数:**  
+ids/ids[] 上传批次id 必填  
+
+>**返回:**
+查询结果
 
