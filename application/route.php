@@ -154,6 +154,17 @@ Route::group('admin', function () {
                 ]);
             });
 
+            Route::group('tasks', function () {
+                Route::get([
+                    'list' => 'Tasks/list',   // 获取书单上传批次列表
+                ]);
+
+                Route::post([
+                    'drop'   => 'Tasks/drop',     // 删除书单上传批次
+                    'change' => 'Tasks/update',   // 更新书单上传批次
+                ]);
+            });
+
             Route::group('uploads', function () {
                 Route::post([
                     'image' => 'Uploads/image',   // 上传图片
