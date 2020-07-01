@@ -53,9 +53,9 @@ class Tasks extends Base
         $filters = [];
         $this->setConditions($params);
 
-        if ($this->conditions['wd']) $filters['tasks.name'] = ['like', '%' . $this->conditions['wd'] . '%'];
-        if ($this->conditions['s1']) $filters['tasks.name'] = $this->conditions['s1'];
-        if ($this->conditions['s2']) $filters['tasks.added_at'] = $this->setBetweenFilter($this->conditions['s2']);
+        if ($this->conditions['wd']) $filters['name'] = ['like', '%' . $this->conditions['wd'] . '%'];
+        if ($this->conditions['s1']) $filters['name'] = $this->conditions['s1'];
+        if ($this->conditions['s2']) $filters['added_at'] = $this->setBetweenFilter($this->conditions['s2']);
 
         return $filters;
     }
