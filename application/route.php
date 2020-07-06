@@ -175,3 +175,24 @@ Route::group('admin', function () {
         });
     });
 });
+
+Route::group('index', function () {
+    Route::bind('index');
+    Route::group('api', function () {
+        Route::group('v1', function () {
+            Route::group('user', function () {
+                Route::post([
+                    'register' => 'User/register',   // 注册 TODO
+                    'login'    => 'User/login'       // 登录 TODO
+                ]);
+            });
+
+            Route::group('videos', function () {
+                Route::get([
+                    'list' => 'Videos/list',   // 查看小视频列表 TODO
+                    'info' => 'Videos/info'    // 查看小视频详细信息 TODO
+                ]);
+            });
+        });
+    });
+});
