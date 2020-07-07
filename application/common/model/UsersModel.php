@@ -1,8 +1,6 @@
 <?php
 
-namespace app\admin\model;
-
-use app\common\model\BaseModel;
+namespace app\common\model;
 
 class UsersModel extends BaseModel
 {

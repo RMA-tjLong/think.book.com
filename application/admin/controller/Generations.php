@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Request;
 use think\Env;
 use think\Db;
-use app\admin\model\GenerationsModel;
+use app\common\model\GenerationsModel;
 
 class Generations extends Base
 {

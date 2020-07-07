@@ -4,7 +4,7 @@ namespace app\admin\controller;
 
 use think\Env;
 use think\Request;
-use app\admin\model\VideosModel;
+use app\common\model\VideosModel;
 use think\Db;
 
 class Videos extends Base

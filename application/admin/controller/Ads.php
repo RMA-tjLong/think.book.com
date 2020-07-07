@@ -4,7 +4,7 @@ namespace app\admin\controller;
 
 use think\Env;
 use think\Request;
-use app\admin\model\AdsModel;
+use app\common\model\AdsModel;
 use think\Db;
 
 class Ads extends Base

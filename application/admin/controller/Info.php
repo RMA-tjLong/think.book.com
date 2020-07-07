@@ -3,7 +3,7 @@
 namespace app\admin\controller;
 
 use think\Request;
-use app\admin\model\InfoModel;
+use app\common\model\InfoModel;
 use think\Db;
 
 class Info extends Base

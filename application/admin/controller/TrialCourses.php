@@ -4,7 +4,7 @@ namespace app\admin\controller;
 
 use think\Env;
 use think\Request;
-use app\admin\model\TrialCoursesModel;
+use app\common\model\TrialCoursesModel;
 use think\Db;
 
 class TrialCourses extends Base

@@ -4,7 +4,7 @@ namespace app\admin\controller;
 
 use think\Env;
 use think\Request;
-use app\admin\model\AdminsModel;
+use app\common\model\AdminsModel;
 
 class Admins extends Base
 {

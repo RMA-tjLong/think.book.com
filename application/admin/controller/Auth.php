@@ -2,7 +2,7 @@
 
 namespace app\admin\controller;
 
-use app\admin\model\AdminsModel;
+use app\common\model\AdminsModel;
 use app\common\JWTToken;
 use think\Request;
 use think\Env;

@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Db;
 use think\Env;
 use think\Request;
-use app\admin\model\UsersModel;
+use app\common\model\UsersModel;
 
 class Users extends Base
 {

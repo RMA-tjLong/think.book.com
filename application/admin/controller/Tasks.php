@@ -2,11 +2,11 @@
 
 namespace app\admin\controller;
 
-use app\admin\model\BooksModel;
+use app\common\model\BooksModel;
 use think\Request;
 use think\Env;
 use think\Db;
-use app\admin\model\TasksModel;
+use app\common\model\TasksModel;
 
 class Tasks extends Base
 {

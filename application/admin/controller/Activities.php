@@ -4,7 +4,7 @@ namespace app\admin\controller;
 
 use think\Env;
 use think\Request;
-use app\admin\model\ActivitiesModel;
+use app\common\model\ActivitiesModel;
 use think\Db;
 
 class Activities extends Base
