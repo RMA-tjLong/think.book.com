@@ -13,10 +13,11 @@ use think\Route;
 
 Route::group('api', function () {
     Route::group('v1', function () {
-        Route::group('user', function () {
+        Route::group('auth', function () {
             Route::post([
-                'register' => 'User/register',   // 注册 TODO
-                'login'    => 'User/login'       // 登录 TODO
+                'register'    => 'Auth/register',   // 注册 TODO
+                'login'       => 'Auth/login',      // 登录
+                'check-phone' => 'Auth/checkPhone'  // 检查电话号码是否被注册
             ]);
         });
 

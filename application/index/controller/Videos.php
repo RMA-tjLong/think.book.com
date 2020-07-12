@@ -8,6 +8,12 @@ use think\Env;
 
 class Videos extends Base
 {
+    public function _initialize()
+    {
+        $this->no_need_signature = ['list', 'info'];
+        parent::_initialize();
+    }
+
     /**
      * 查看视频列表
      *

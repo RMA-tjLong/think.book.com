@@ -52,21 +52,19 @@ class Users extends Base
      */
     protected function getFilters($params = [])
     {
-        $this->fields = ['wd', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10'];
+        $this->fields = ['wd', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8'];
         $filters = [];
         $this->setConditions($params);
 
-        if ($this->conditions['wd']) $filters['users.phone|users.openid|users.unionid'] = ['like', '%' . $this->conditions['wd'] . '%'];
-        if ($this->conditions['s1']) $filters['users.openid'] = $this->conditions['s1'];
-        if ($this->conditions['s2']) $filters['users.unionid'] = $this->conditions['s2'];
-        if ($this->conditions['s3']) $filters['users.phone'] = $this->conditions['s3'];
-        if ($this->conditions['s4']) $filters['users.nickname'] = ['like', '%' . $this->conditions['s4'] . '%'];
-        if ($this->conditions['s5']) $filters['users.added_at'] = $this->setBetweenFilter($this->conditions['s5']);
-        if ($this->conditions['s6'] !== '') $filters['book_vips.vip'] = $this->conditions['s6'];
-        if ($this->conditions['s7']) $filters['book_vips.balance'] = $this->setBetweenFilter($this->conditions['s7']);
-        if ($this->conditions['s8']) $filters['book_vips.ended_at'] = $this->setBetweenFilter($this->conditions['s8']);
-        if ($this->conditions['s9'] !== '') $filters['class_vips.vip'] = $this->conditions['s9'];
-        if ($this->conditions['s10']) $filters['class_vips.balance'] = $this->setBetweenFilter($this->conditions['s10']);
+        if ($this->conditions['wd']) $filters['users.phone'] = ['like', '%' . $this->conditions['wd'] . '%'];
+        if ($this->conditions['s1']) $filters['users.phone'] = $this->conditions['s1'];
+        if ($this->conditions['s2']) $filters['users.nickname'] = ['like', '%' . $this->conditions['s2'] . '%'];
+        if ($this->conditions['s3']) $filters['users.added_at'] = $this->setBetweenFilter($this->conditions['s3']);
+        if ($this->conditions['s4'] !== '') $filters['book_vips.vip'] = $this->conditions['s4'];
+        if ($this->conditions['s5']) $filters['book_vips.balance'] = $this->setBetweenFilter($this->conditions['s5']);
+        if ($this->conditions['s6']) $filters['book_vips.ended_at'] = $this->setBetweenFilter($this->conditions['s6']);
+        if ($this->conditions['s7'] !== '') $filters['class_vips.vip'] = $this->conditions['s7'];
+        if ($this->conditions['s8']) $filters['class_vips.balance'] = $this->setBetweenFilter($this->conditions['s8']);
 
         return $filters;
     }

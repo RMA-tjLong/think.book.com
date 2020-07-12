@@ -6,6 +6,12 @@ use think\Db;
 
 class Info extends Base
 {
+    public function _initialize()
+    {
+        $this->no_need_signature = ['info'];
+        parent::_initialize();
+    }
+
     /**
      * 查看企业信息
      *
