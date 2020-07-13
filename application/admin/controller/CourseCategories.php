@@ -4,9 +4,9 @@ namespace app\admin\controller;
 
 use think\Request;
 use think\Db;
-use app\common\model\GenerationsModel;
+use app\common\model\CourseCategoriesModel;
 
-class Generations extends Base
+class CourseCategories extends Base
 {
     public function _initialize()
     {
@@ -14,13 +14,13 @@ class Generations extends Base
     }
 
     /**
-     * 查看年龄段列表
+     * 查看课程分类列表
      *
      * @return void
      */
     public function list()
     {
-        $res = Db::name('generations')
+        $res = Db::name('course_categories')
             ->order('added_at desc')
             ->select();
 
@@ -28,7 +28,7 @@ class Generations extends Base
     }
 
     /**
-     * 删除年龄段
+     * 删除课程分类
      *
      * @return void
      */
@@ -46,13 +46,13 @@ class Generations extends Base
         $ids = $post['ids'];
 
         if (!is_array($ids)) $ids = [$ids];
-        if (GenerationsModel::destroy($ids)) exit(ajax_return_ok());
+        if (CourseCategoriesModel::destroy($ids)) exit(ajax_return_ok());
 
         exit(ajax_return_error('sql_error'));
     }
 
     /**
-     * 添加年龄段
+     * 添加课程分类
      *
      * @return void
      */
@@ -67,8 +67,8 @@ class Generations extends Base
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
-        $generations = new GenerationsModel($post);
-        $res = $generations->allowField(true)->save($post);
+        $course_categories = new CourseCategoriesModel($post);
+        $res = $course_categories->allowField(true)->save($post);
 
         if ($res) exit(ajax_return_ok());
 
@@ -76,7 +76,7 @@ class Generations extends Base
     }
 
     /**
-     * 更新年龄段
+     * 更新课程列表
      *
      * @return void
      */
@@ -92,8 +92,8 @@ class Generations extends Base
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
-        $generations = GenerationsModel::get($post['id']);
-        $res = $generations->allowField(['name'])->save($post);
+        $course_categories = CourseCategoriesModel::get($post['id']);
+        $res = $course_categories->allowField(['name'])->save($post);
 
         if ($res) exit(ajax_return_ok());
 

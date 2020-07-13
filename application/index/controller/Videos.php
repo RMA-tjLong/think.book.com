@@ -40,7 +40,7 @@ class Videos extends Base
 
         exit(ajax_return_ok($data));
     }
-    
+
     /**
      * 查看视频详情
      *

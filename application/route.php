@@ -15,7 +15,7 @@ Route::group('api', function () {
     Route::group('v1', function () {
         Route::group('auth', function () {
             Route::post([
-                'register'    => 'Auth/register',   // 注册 TODO
+                'register'    => 'Auth/register',   // 注册
                 'login'       => 'Auth/login',      // 登录
                 'check-phone' => 'Auth/checkPhone'  // 检查电话号码是否被注册
             ]);
@@ -23,15 +23,46 @@ Route::group('api', function () {
 
         Route::group('videos', function () {
             Route::get([
-                'list' => 'Videos/list',   // 查看小视频列表 TODO
-                'info' => 'Videos/info'    // 查看小视频详细信息 TODO
+                'list' => 'Videos/list',   // 查看小视频列表
+                'info' => 'Videos/info'    // 查看小视频详细信息
             ]);
         });
 
         Route::group('books', function () {
             Route::get([
-                'list' => 'Books/list',   // 书单列表 TODO
-                'info' => 'Books/info',   // 书目信息 TODO
+                'list' => 'Books/list',   // 书单列表
+                'info' => 'Books/info',   // 书目信息
+            ]);
+        });
+
+        Route::group('trial-courses', function () {
+            Route::get([
+                'list' => 'TrialCourses/list',   // 获取试听课程列表
+                'info' => 'TrialCourses/info'    // 查看试听课程详情
+            ]);
+
+            Route::post([
+                'apply' => 'TrialCourses/recordApply',   // 记录用户申请 TODO
+            ]);
+        });
+
+        Route::group('formal-courses', function () {
+            Route::get([
+                'list' => 'FormalCourses/list',   // 获取正式课程列表 TODO
+                'info' => 'FormalCourses/info'    // 查看正式课程详情 TODO
+            ]);
+
+            Route::post([
+                'drop'   => 'FormalCourses/drop',     // 删除某条正式课程 TODO
+                'delete' => 'FormalCourses/delete',   // 软删除某条正式课程 TODO
+                'store'  => 'FormalCourses/store',    // 添加某条正式课程 TODO
+                'change' => 'FormalCourses/update'    // 更新某条正式课程 TODO
+            ]);
+        });
+
+        Route::group('course-categories', function () {
+            Route::get([
+                'list' => 'CourseCategories/list',   // 获取课程分类列表
             ]);
         });
 
@@ -175,6 +206,18 @@ Route::group('admin', function () {
                     'drop'   => 'admin/Generations/drop',     // 删除年龄段
                     'store'  => 'admin/Generations/store',    // 添加年龄段
                     'change' => 'admin/Generations/update',   // 更新年龄段
+                ]);
+            });
+
+            Route::group('course-categories', function () {
+                Route::get([
+                    'list' => 'admin/CourseCategories/list',   // 获取课程分类列表
+                ]);
+
+                Route::post([
+                    'drop'   => 'admin/CourseCategories/drop',     // 删除课程分类
+                    'store'  => 'admin/CourseCategories/store',    // 添加课程分类
+                    'change' => 'admin/CourseCategories/update',   // 更新课程分类
                 ]);
             });
 

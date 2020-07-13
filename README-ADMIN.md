@@ -244,6 +244,7 @@ wd 标题模糊搜索
 s1 标题搜索  
 s2 状态搜索  
 s3 添加时间搜索  
+s4 课程分类搜索（课程分类列表由课程分类接口获得）  
 
 >**返回:**
 查询结果
@@ -289,6 +290,7 @@ admin/api/v1/formal-courses/store (post)
 >**参数:**    
 name 课程名称（必填）  
 content 课程内容（选填）  
+catid 课程分类id（必填，由课程分类接口获取）
 
 >**返回:**
 添加结果
@@ -303,6 +305,7 @@ id 课程id（必填）
 name 课程名称（必填）  
 content 课程内容（选填）  
 status 课程状态（必填） 
+catid 课程分类id  
 
 >**返回:**
 修改结果
@@ -599,6 +602,47 @@ admin/api/v1/generations/drop (post)
 
 >**参数:**  
 ids/ids[] 年龄段id 必填  
+
+>**返回:**
+查询结果
+***
+### 课程分类列表
+>**请求:**
+admin/api/v1/course-categories/list (get)
+
+>**参数:**  
+无分页，直接获取全部
+
+>**返回:**
+查询结果
+***
+### 课程分类添加
+>**请求:**
+admin/api/v1/course-categories/store (post)
+
+>**参数:**  
+name 分类名称 必填  
+
+>**返回:**
+查询结果
+***
+### 课程分类编辑
+>**请求:**
+admin/api/v1/course-categories/change (post)
+
+>**参数:**  
+id 分类id 必填  
+name 分类名称 必填  
+
+>**返回:**
+查询结果
+***
+### 课程分类删除
+>**请求:**
+admin/api/v1/course-categories/drop (post)
+
+>**参数:**  
+ids/ids[] 分类id 必填  
 
 >**返回:**
 查询结果

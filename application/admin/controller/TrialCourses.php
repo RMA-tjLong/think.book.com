@@ -27,8 +27,9 @@ class TrialCourses extends Base
         $current_page = $get['page'] ?? 1;
         $res = Db::name('trial_courses')
             ->alias('trial_courses')
-            ->field('trial_courses.*, admins.username')
+            ->field('trial_courses.*, admins.username, course_categories.name as cat_name')
             ->join('admins', 'admins.id = trial_courses.adminid')
+            ->join('course_categories', 'trial_courses.catid = course_categories.id', 'left')
             ->where($this->getFilters($get))
             ->order('added_at desc')
             ->paginate(null, false, [
@@ -51,7 +52,7 @@ class TrialCourses extends Base
      */
     protected function getFilters($params = [])
     {
-        $this->fields = ['wd', 's1', 's2', 's3'];
+        $this->fields = ['wd', 's1', 's2', 's3', 's4'];
         $filters = [];
         $this->setConditions($params);
 
@@ -59,6 +60,7 @@ class TrialCourses extends Base
         if ($this->conditions['s1']) $filters['trial_courses.name'] = $this->conditions['s1'];
         if ($this->conditions['s2']) $filters['trial_courses.status'] = $this->conditions['s2'];
         if ($this->conditions['s3']) $filters['trial_courses.added_at'] = $this->setBetweenFilter($this->conditions['s3']);
+        if ($this->conditions['s4']) $filters['trial_courses.catid'] = $this->conditions['s4'];
 
         return $filters;
     }
@@ -72,8 +74,9 @@ class TrialCourses extends Base
     {
         $data = Db::name('trial_courses')
             ->alias('trial_courses')
-            ->field('trial_courses.*, admins.username')
+            ->field('trial_courses.*, admins.username, course_categories.name as cat_name')
             ->join('admins', 'admins.id = trial_courses.adminid')
+            ->join('course_categories', 'course_categories.id = trial_courses.catid', 'left')
             ->order('added_at desc')
             ->find($id);
 
@@ -105,7 +108,7 @@ class TrialCourses extends Base
     }
 
     /**
-     * 软删除视频
+     * 软删除试听课
      *
      * @return void
      */
@@ -119,13 +122,13 @@ class TrialCourses extends Base
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
-        
+
         $ids = $post['ids'];
 
         if (!is_array($ids)) $ids = [$ids];
 
         $res = TrialCoursesModel::where(['id' => ['in', $ids]])->update(['status' => 0]);
-        
+
         if ($res) exit(ajax_return_ok());
         exit(ajax_return_error('sql_error'));
     }
@@ -142,7 +145,8 @@ class TrialCourses extends Base
         $post = Request::instance()->post();
         $result = $this->validate($post, [
             'name'   => 'require',
-            'status' => 'in:1,2'
+            'status' => 'in:1,2',
+            'catid'  => 'require'
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
@@ -169,13 +173,14 @@ class TrialCourses extends Base
         $result = $this->validate($post, [
             'id'     => 'require',
             'name'   => 'require',
-            'status' => 'require|in:1,2'
+            'status' => 'require|in:1,2',
+            'catid'  => 'require'
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
 
         $ads = TrialCoursesModel::get($post['id']);
-        $res = $ads->allowField(['name', 'content', 'status'])->save($post);
+        $res = $ads->allowField(['name', 'content', 'status', 'catid'])->save($post);
 
         if ($res) exit(ajax_return_ok());
 

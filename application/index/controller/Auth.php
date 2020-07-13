@@ -54,7 +54,7 @@ class Auth extends Base
                 ->join('book_vips book_vips', 'book_vips.userid = users.id', 'left')
                 ->join('class_vips class_vips', 'class_vips.userid = users.id', 'left')
                 ->find($res['id']);
-            
+
             $signature_time = time();
             exit(ajax_return_ok(array_merge($data, [
                 'signature'      => Signature::encryptSignature($res['id'], $signature_time),
@@ -95,7 +95,7 @@ class Auth extends Base
         ]);
 
         if (true !== $result) exit(ajax_return_error('validate_error'));
-        
+
         $post['password'] = get_hash_str($post['password'] . Env::get('app.salt'));
         $users = new UsersModel($post);
         $uid = $users->allowField(true)->save();
