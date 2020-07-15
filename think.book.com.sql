@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2020-07-15 23:46:15
+Date: 2020-07-16 00:24:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -331,6 +331,7 @@ CREATE TABLE `bk_trial_course_applies` (
   `birth` date DEFAULT NULL COMMENT '生日',
   `catid` int(11) DEFAULT NULL COMMENT '课程类型id',
   `phone` varchar(32) DEFAULT NULL COMMENT '联系电话',
+  `status` tinyint(1) DEFAULT '1' COMMENT '1：有效；0：无效',
   `added_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)

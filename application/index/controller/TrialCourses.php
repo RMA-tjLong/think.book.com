@@ -2,6 +2,7 @@
 
 namespace app\index\controller;
 
+use app\common\model\TrialCourseAppliesModel;
 use think\Env;
 use think\Request;
 use think\Db;
@@ -82,8 +83,30 @@ class TrialCourses extends Base
         exit(ajax_return_ok($data));
     }
 
+    /**
+     * 试听课申请
+     *
+     * @return void
+     */
     public function recordApply()
     {
-        
+        if (!Request::instance()->isPost()) exit;
+
+        $post = Request::instance()->post();
+        $result = $this->validate($post, [
+            'name'  => 'require',
+            'birth' => 'require',
+            'catid' => 'require',
+            'phone' => 'require'
+        ]);
+
+        if (true !== $result) exit(ajax_return_error('validate_error'));
+
+        $trial_course_applies = new TrialCourseAppliesModel($post);
+        $res = $trial_course_applies->allowField(true)->save($post);
+
+        if ($res) exit(ajax_return_ok());
+
+        exit(ajax_return_error('sql_error'));
     }
 }
