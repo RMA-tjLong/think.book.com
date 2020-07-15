@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2020-07-12 16:33:54
+Date: 2020-07-15 23:46:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -140,9 +140,9 @@ CREATE TABLE `bk_books` (
 -- ----------------------------
 -- Records of bk_books
 -- ----------------------------
-INSERT INTO `bk_books` VALUES ('27', '2313', 'uywyiqwe', '1', '123123', null, null, null, 'asdasdasd', null, null, 'sjlkajsdl', null, null, null, null, null, '1', '2', '2020-06-28 21:33:32', '2020-06-28 21:18:27', '2020-06-28 21:33:32');
-INSERT INTO `bk_books` VALUES ('28', '2313', '123123123', '1', '12312asd', null, null, null, '/static/files/book-default-cover.png', null, null, null, null, null, null, null, null, '1', '1', null, '2020-06-29 21:34:30', '2020-06-29 21:34:30');
-INSERT INTO `bk_books` VALUES ('29', '2313', '123123123', '1', '12312asd', null, null, null, '/static/files/book-default-cover.png', null, null, null, null, null, null, null, null, '1', '1', null, '2020-06-29 21:34:43', '2020-06-29 21:34:43');
+INSERT INTO `bk_books` VALUES ('27', '2313', 'uywyiqwe', '1', '123123', null, null, null, 'asdasdasd', null, null, 'sjlkajsdl', null, null, null, null, null, '1', '2', '2020-06-28 21:33:31', '2020-06-28 21:18:27', '2020-06-28 21:33:32');
+INSERT INTO `bk_books` VALUES ('28', '阿斯顿', '123123123', '1', '12312asd', null, null, null, '/static/files/book-default-cover.png', null, null, null, null, null, null, '2', null, '1', '1', null, '2020-06-29 21:34:30', '2020-06-29 21:34:30');
+INSERT INTO `bk_books` VALUES ('29', '2313阿斯顿', '123123123', '1', '12312asd', null, null, null, '/static/files/book-default-cover.png', null, null, null, null, null, null, null, null, '1', '1', null, '2020-06-29 21:34:43', '2020-06-29 21:34:43');
 
 -- ----------------------------
 -- Table structure for bk_class_vips
@@ -167,11 +167,33 @@ INSERT INTO `bk_class_vips` VALUES ('1', '1', '1', '12', '2020-05-26 23:23:10', 
 INSERT INTO `bk_class_vips` VALUES ('2', '4', '0', '0', '2020-07-12 16:10:33', '2020-07-12 16:10:33');
 
 -- ----------------------------
+-- Table structure for bk_course_categories
+-- ----------------------------
+DROP TABLE IF EXISTS `bk_course_categories`;
+CREATE TABLE `bk_course_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) DEFAULT NULL,
+  `added_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bk_course_categories
+-- ----------------------------
+INSERT INTO `bk_course_categories` VALUES ('1', '中文', '2020-07-13 21:24:45', '2020-07-13 21:24:48');
+INSERT INTO `bk_course_categories` VALUES ('2', '艺术', '2020-07-13 21:25:01', '2020-07-13 21:25:03');
+INSERT INTO `bk_course_categories` VALUES ('3', '食法', '2020-07-13 21:25:28', '2020-07-13 21:25:32');
+INSERT INTO `bk_course_categories` VALUES ('4', '科学', '2020-07-13 21:25:42', '2020-07-13 21:25:42');
+INSERT INTO `bk_course_categories` VALUES ('5', 'steam', '2020-07-13 21:25:42', '2020-07-13 21:25:42');
+
+-- ----------------------------
 -- Table structure for bk_formal_courses
 -- ----------------------------
 DROP TABLE IF EXISTS `bk_formal_courses`;
 CREATE TABLE `bk_formal_courses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `catid` int(11) DEFAULT NULL COMMENT '课程分类id',
   `name` varchar(32) DEFAULT NULL,
   `content` varchar(255) DEFAULT NULL,
   `status` tinyint(1) DEFAULT '1' COMMENT '0：已删除；1：已下架；2：上架中；',
@@ -184,13 +206,13 @@ CREATE TABLE `bk_formal_courses` (
 -- ----------------------------
 -- Records of bk_formal_courses
 -- ----------------------------
-INSERT INTO `bk_formal_courses` VALUES ('2', '3123大大', '试听课内容', '2', '1', '2020-06-07 21:32:49', '2020-06-07 22:26:50');
-INSERT INTO `bk_formal_courses` VALUES ('4', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
-INSERT INTO `bk_formal_courses` VALUES ('7', 'ahjskdh', null, '1', '1', '2020-06-07 21:44:29', '2020-06-07 21:44:29');
-INSERT INTO `bk_formal_courses` VALUES ('8', 'ahjskdh', null, '1', '1', '2020-06-07 21:44:42', '2020-06-07 21:44:42');
-INSERT INTO `bk_formal_courses` VALUES ('9', 'ahjskdh', 'sjflksjflkdsfsdf', '1', '1', '2020-06-07 21:44:52', '2020-06-07 21:44:52');
-INSERT INTO `bk_formal_courses` VALUES ('10', 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 21:45:09', '2020-06-07 21:45:09');
-INSERT INTO `bk_formal_courses` VALUES ('11', 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 22:27:15', '2020-06-07 22:27:15');
+INSERT INTO `bk_formal_courses` VALUES ('2', null, '3123大大', '试听课内容', '2', '1', '2020-06-07 21:32:49', '2020-06-07 22:26:50');
+INSERT INTO `bk_formal_courses` VALUES ('4', null, '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
+INSERT INTO `bk_formal_courses` VALUES ('7', null, 'ahjskdh', null, '1', '1', '2020-06-07 21:44:29', '2020-06-07 21:44:29');
+INSERT INTO `bk_formal_courses` VALUES ('8', null, 'ahjskdh', null, '1', '1', '2020-06-07 21:44:42', '2020-06-07 21:44:42');
+INSERT INTO `bk_formal_courses` VALUES ('9', null, 'ahjskdh', 'sjflksjflkdsfsdf', '1', '1', '2020-06-07 21:44:52', '2020-06-07 21:44:52');
+INSERT INTO `bk_formal_courses` VALUES ('10', null, 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 21:45:09', '2020-06-07 21:45:09');
+INSERT INTO `bk_formal_courses` VALUES ('11', null, 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 22:27:15', '2020-06-07 22:27:15');
 
 -- ----------------------------
 -- Table structure for bk_generations
@@ -300,11 +322,31 @@ CREATE TABLE `bk_tasks` (
 INSERT INTO `bk_tasks` VALUES ('1', '2313', '2020-07-07 23:22:13', '2020-07-07 23:22:20');
 
 -- ----------------------------
+-- Table structure for bk_trial_course_applies
+-- ----------------------------
+DROP TABLE IF EXISTS `bk_trial_course_applies`;
+CREATE TABLE `bk_trial_course_applies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) DEFAULT NULL COMMENT '姓名',
+  `birth` date DEFAULT NULL COMMENT '生日',
+  `catid` int(11) DEFAULT NULL COMMENT '课程类型id',
+  `phone` varchar(32) DEFAULT NULL COMMENT '联系电话',
+  `added_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bk_trial_course_applies
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for bk_trial_courses
 -- ----------------------------
 DROP TABLE IF EXISTS `bk_trial_courses`;
 CREATE TABLE `bk_trial_courses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `catid` int(11) DEFAULT NULL COMMENT '课程分类id',
   `name` varchar(64) DEFAULT NULL COMMENT '试听课名称',
   `content` varchar(255) DEFAULT NULL,
   `status` tinyint(1) DEFAULT '1' COMMENT '0：已删除；1：已下架；2：上架中；',
@@ -317,14 +359,14 @@ CREATE TABLE `bk_trial_courses` (
 -- ----------------------------
 -- Records of bk_trial_courses
 -- ----------------------------
-INSERT INTO `bk_trial_courses` VALUES ('2', '3123', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 22:16:21');
-INSERT INTO `bk_trial_courses` VALUES ('4', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
-INSERT INTO `bk_trial_courses` VALUES ('5', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
-INSERT INTO `bk_trial_courses` VALUES ('6', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
-INSERT INTO `bk_trial_courses` VALUES ('7', 'ahjskdh', null, '1', '1', '2020-06-07 21:44:29', '2020-06-07 21:44:29');
-INSERT INTO `bk_trial_courses` VALUES ('8', 'ahjskdh', null, '1', '1', '2020-06-07 21:44:42', '2020-06-07 21:44:42');
-INSERT INTO `bk_trial_courses` VALUES ('9', 'ahjskdh', 'sjflksjflkdsfsdf', '1', '1', '2020-06-07 21:44:52', '2020-06-07 21:44:52');
-INSERT INTO `bk_trial_courses` VALUES ('10', 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 21:45:09', '2020-06-07 21:45:09');
+INSERT INTO `bk_trial_courses` VALUES ('2', '1', '3123', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 22:16:21');
+INSERT INTO `bk_trial_courses` VALUES ('4', '1', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
+INSERT INTO `bk_trial_courses` VALUES ('5', '2', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
+INSERT INTO `bk_trial_courses` VALUES ('6', '1', '试听课', '试听课内容', '1', '1', '2020-06-07 21:32:49', '2020-06-07 21:32:52');
+INSERT INTO `bk_trial_courses` VALUES ('7', '1', 'ahjskdh', null, '1', '1', '2020-06-07 21:44:29', '2020-06-07 21:44:29');
+INSERT INTO `bk_trial_courses` VALUES ('8', '1', 'ahjskdh', null, '1', '1', '2020-06-07 21:44:42', '2020-06-07 21:44:42');
+INSERT INTO `bk_trial_courses` VALUES ('9', '1', 'ahjskdh', 'sjflksjflkdsfsdf', '1', '1', '2020-06-07 21:44:52', '2020-06-07 21:44:52');
+INSERT INTO `bk_trial_courses` VALUES ('10', '1', 'ahjskdh', 'sjflksjflkdsfsdf', '2', '1', '2020-06-07 21:45:09', '2020-06-07 21:45:09');
 
 -- ----------------------------
 -- Table structure for bk_users
