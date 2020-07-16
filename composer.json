@@ -21,7 +21,8 @@
         "lcobucci/jwt": "^3.3",
         "php-curl-class/php-curl-class": "^8.8",
         "jiaweixs/weapp": "^1.4",
-        "phpoffice/phpspreadsheet": "^1.13"
+        "phpoffice/phpspreadsheet": "^1.13",
+        "endroid/qr-code": "^3.9"
     },
     "autoload": {
         "psr-4": {
