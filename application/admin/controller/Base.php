@@ -28,7 +28,7 @@ class Base extends CommonBase
      */
     private function checkToken()
     {
-        $token = Request::instance()->params('_token');
+        $token = Request::instance()->param('_token');
 
         if (!$token) exit(ajax_return_error('token_missed'));
 

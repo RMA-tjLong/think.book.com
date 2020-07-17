@@ -2,6 +2,7 @@
 *.log
 runtime
 public/static/uploads
+.env
 测试.xls
 多数据测试.xls
 书刊信息.xls
