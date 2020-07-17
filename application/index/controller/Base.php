@@ -26,8 +26,8 @@ class Base extends CommonBase
      */
     private function checkSignature()
     {
-        $signature = Request::instance()->header('signature');
-        $signature_time = Request::instance()->header('signature_time');
+        $signature = Request::instance()->params('_signature');
+        $signature_time = Request::instance()->params('_signature_time');
         $uid = Request::instance()->param('uid');
 
         if (!$signature) exit(ajax_return_error('signature_missed'));
