@@ -104,7 +104,7 @@ class Books extends Base
             ->join('tasks tasks', 'tasks.id = books.taskid', 'left')
             ->where($this->getFilters($get))
             ->order('books.added_at desc')
-            ->limit($current_page - 1, $page_size)
+            ->limit(($current_page - 1) * $page_size, $page_size)
             ->select();
 
         $data = [
