@@ -85,6 +85,17 @@ class Books extends Base
     {
         $get = Request::instance()->get();
         $current_page = $get['page'] ?? 1;
+        $page_size = $get['pageSize'] ?? Env::get('app.list_rows', 15);
+
+        $res_count = Db::name('books')
+            ->alias('books')
+            ->field('books.id')
+            ->join('admins admins', 'admins.id = books.adminid')
+            ->join('generations generations', 'generations.id = books.generationid', 'left')
+            ->join('tasks tasks', 'tasks.id = books.taskid', 'left')
+            ->where($this->getFilters($get))
+            ->count();
+
         $res = Db::name('books')
             ->alias('books')
             ->field('books.id, books.name, number, num, barcode, isbn, author, publishing, cover, price, collection, room, shelf, status, uploaded_at, books.added_at, books.updated_at, admins.username, generations.name as generations_name, tasks.name as tasks_name')
@@ -93,14 +104,12 @@ class Books extends Base
             ->join('tasks tasks', 'tasks.id = books.taskid', 'left')
             ->where($this->getFilters($get))
             ->order('books.added_at desc')
-            ->paginate(null, false, [
-                'page' => $current_page,
-                'path' => Env::get('app.client_url')
-            ]);
+            ->limit($current_page - 1, $page_size)
+            ->select();
 
         $data = [
-            'list'   => $res->items(),
-            'render' => $res->render()
+            'list'  => $res,
+            'total' => $res_count
         ];
 
         exit(ajax_return_ok($data));
