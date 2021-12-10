@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "topthink/framework": "5.0.*",
+        "topthink/framework": "6.0.*",
         "lcobucci/jwt": "^3.3",
         "php-curl-class/php-curl-class": "^8.8",
         "jiaweixs/weapp": "^1.4",
